@@ -1,0 +1,16 @@
+{
+  "id": "demo-3min",
+  "title": "Fruit Friends, Bubbles & Colors | Baby Sensory Demo",
+  "thumbnailText": "Fruit Friends | & Bubbles",
+  "hook": "A short sampler of every BabyLoop track: sensory loops, a colors lesson, a Mother Goose rhyme, and a sleepy wind-down.",
+  "seed": 7,
+  "voice": "kristin",
+  "segments": [
+    { "type": "title", "text": "Fruit Friends", "caption": "& friends", "seconds": 4, "props": ["🍓", "🍊", "🫐"] },
+    { "type": "loop", "scene": "dancing-fruits", "minutes": 0.6, "bpm": 112, "melody": "twinkle", "music": "dance", "seed": 11 },
+    { "type": "loop", "scene": "bubbles", "minutes": 0.5, "bpm": 96, "melody": "row", "music": "learn", "seed": 5 },
+    { "type": "lesson", "lesson": "colors", "limit": 4, "bpm": 94, "music": "learn" },
+    { "type": "rhyme", "rhyme": "humpty-dumpty", "bpm": 96 },
+    { "type": "loop", "scene": "sleepy-stars", "minutes": 0.5, "bpm": 66, "melody": "brahms", "music": "lullaby", "seed": 2 }
+  ]
+}

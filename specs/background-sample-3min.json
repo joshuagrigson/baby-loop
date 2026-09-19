@@ -1,0 +1,16 @@
+{
+  "id": "background-sample",
+  "title": "Fruit Friends, Bubbles & High Contrast | Calm Baby Sensory | Sample",
+  "thumbnailText": "Fruit Friends | Baby Sensory",
+  "hook": "Three-minute sample of the background-video pipeline: fruit friends on the beat, floating bubbles, a newborn high-contrast interlude and a sleepy-stars wind-down. Same loops scale to 30 or 60 minutes by changing one number per segment.",
+  "seed": 9,
+  "crf": 20,
+  "segments": [
+    { "type": "title", "text": "Fruit Friends", "caption": "Baby Sensory", "seconds": 4, "props": ["🍓", "🍊", "🍐"] },
+    { "type": "loop", "scene": "dancing-fruits", "label": "Fruit Friends — Twinkle", "minutes": 0.8, "bpm": 112, "melody": "twinkle", "music": "dance", "seed": 101 },
+    { "type": "loop", "scene": "bubbles", "label": "Bubbles", "minutes": 0.5, "bpm": 96, "melody": "row", "music": "learn", "seed": 102 },
+    { "type": "loop", "scene": "high-contrast", "label": "High Contrast (newborn)", "minutes": 0.4, "bpm": 72, "melody": "mary", "music": "lullaby", "seed": 104 },
+    { "type": "loop", "scene": "dancing-fruits", "label": "Fruit Friends — Frère Jacques", "minutes": 0.3, "bpm": 112, "melody": "frere", "music": "dance", "seed": 103, "options": { "count": 4 } },
+    { "type": "loop", "scene": "sleepy-stars", "label": "Sleepy Stars (wind-down)", "minutes": 0.5, "bpm": 66, "melody": "brahms", "music": "lullaby", "seed": 108 }
+  ]
+}

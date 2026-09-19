@@ -1,0 +1,137 @@
+# BabyLoop — Handoff
+
+**For:** whoever produces the actual background videos (a developer, an editor, or another Claude session).
+**Repo:** `joshuagrigson/paper-plate`, branch `claude/magical-gauss-mtxsrl`, folder `babyloop/`.
+**State:** background-video pipeline built and verified end to end at 1920×1080/30 fps with muxed AAC audio. Story/lesson narration pipeline built and unit-verified; its content library (stories, rhymes, lessons JSON) is the one piece still landing.
+
+---
+
+## 1. What this is, in one paragraph
+
+A Node + ffmpeg factory for faceless baby/toddler YouTube videos. Scenes are plain Canvas 2D modules (fruit characters with faces that hop on the beat, newborn black/white/red patterns, bubbles, a sleepy moon). Music is synthesised in JavaScript from public-domain nursery melodies (music box, marimba, pad, soft kick) so there is no sample, stock or licence to clear. A spec file lists segments; the composer renders each loop **once**, repeats it losslessly for N minutes, cuts to the next scene, and muxes one continuous audio track. Optional narration (offline Piper TTS, public-domain voice) drives picture-book stories, Mother Goose rhymes and flashcard lessons. Output: `episode.mp4` + `thumbnail.png` + `meta.json` (title, chaptered description, tags, `madeForKids: true`) ready for `upload/upload.py`.
+
+Nothing is taken from Hey Bear or anyone else. Competitor research is metadata only (`research/`).
+
+## 2. Produce the background video (the actual deliverable)
+
+```bash
+git clone https://github.com/joshuagrigson/paper-plate && cd paper-plate
+git checkout claude/magical-gauss-mtxsrl && cd babyloop
+npm install                                   # @napi-rs/canvas, prebuilt
+pip install imageio-ffmpeg                    # skip if `ffmpeg -encoders` shows libx264 + aac
+node bin/babyloop.mjs doctor                  # ffmpeg ✔ display font ✔ emoji font ✔ (piper only needed for narration)
+
+node bin/babyloop.mjs episode specs/background-sample-3min.json   # 3-min proof, ~1 min to build
+node bin/babyloop.mjs episode specs/sensory-30min.json            # the 30-minute background video, ~5 min to build
+node bin/babyloop.mjs episode specs/sleepy-60min.json             # 1-hour sleep video
+```
+
+Outputs land in `out/<id>/`: `<id>.mp4`, `thumbnail.png`, `meta.json`, `episode.json` (segment map with timestamps).
+
+To change the video, edit the spec — no code:
+
+| Knob | Where | Effect |
+|---|---|---|
+| length | `segments[].minutes` | rounded up to whole loops (17–57 s each) |
+| scene order / cut rhythm | order of `segments` | Hey Bear changes scene every 4–5 min; we default 3–5 |
+| look | `seed`, `palette` (`primary`, `pastel`, `newborn`), `options.count` (fruits on screen) | different seed = different cast, colours, dot pattern |
+| tempo / mood | `bpm` + `music` (`dance`, `learn`, `lullaby`) | bpm is snapped to the frame grid automatically |
+| tune | `melody`: `twinkle` `mary` `row` `frere` `london` `oldmac` `itsy` `brahms` `generated` | `generated` = seeded original pentatonic tune |
+| quality | top-level `crf` (18 default, 20 smaller), `preset` | x264 settings |
+| quick check | `--preview` flag | 640×360 @ 15 fps, one loop per segment, ~1 min |
+
+Live iteration: `npm run preview` → http://localhost:8787/preview/ shows any scene animating in the browser with seed/bpm/palette controls. It runs the identical scene code the renderer uses.
+
+## 3. Breakdown — what each file does
+
+```
+babyloop/
+├── bin/babyloop.mjs          CLI: scenes | melodies | still | render | music | say | episode | thumbnail | content | doctor
+├── lib/
+│   ├── compose.mjs           THE ORCHESTRATOR. spec → segments → concat → mux → thumbnail + meta. Builders for
+│   │                         loop / title / story / rhyme / lesson; bed music tiling + narration ducking.
+│   ├── render.mjs            canvas frames → raw RGBA pipe → ffmpeg libx264 yuv420p. ~25 fps at 1080p.
+│   ├── music.mjs             pure-JS synth: parse notes/chords, voices (musicbox, marimba, pluck, pad, bass, kick,
+│   │                         shaker), mixer, delay, Schroeder reverb, master; renders a SEAMLESS loop; WAV I/O.
+│   ├── melodies.mjs          8 public-domain melodies as note strings + procedural pentatonic generator.
+│   ├── tts.mjs               Piper wrapper (voice auto-download, cache) + OpenAI TTS option. PD voices only.
+│   ├── thumbnail.mjs         1280×720 frame from the first scene + 2-line title + duration badge.
+│   ├── metadata.mjs          title / chaptered description / tags / madeForKids for upload.py.
+│   ├── content.mjs           loaders for content/*.json; lesson → flashcard items + narration text.
+│   ├── draw.mjs              drawing vocabulary: 8 fruit characters, faces (blink, sing, look), backdrops,
+│   │                         caption pills, outlined text, emoji. Browser-safe.
+│   ├── palette.mjs           infant-vision palettes (newborn / primary / pastel / sleepy) + story backdrops.
+│   ├── easing.mjs            beat helpers (bounce, pulse, blink schedule), colour math. Browser-safe.
+│   ├── rng.mjs               seeded PRNG so (scene, seed) is reproducible everywhere.
+│   ├── info.mjs              builds the per-frame info object identically for renderer and preview.
+│   ├── canvas.mjs            node canvas factory + font registration (assets/fonts, Noto Color Emoji).
+│   ├── ffmpeg.mjs            finds ffmpeg (PATH → imageio-ffmpeg), run(), probeDuration().
+│   └── scenes/
+│       ├── dancing-fruits.mjs  "Fruit Friends Dance" — 3–5 fruit characters hopping on the beat (3–18 m)
+│       ├── high-contrast.mjs   6 slow black/white/red patterns with cross-fades (0–3 m)
+│       ├── bubbles.mjs         pastel bubbles, fish, light rays; integer rises per loop (3–24 m)
+│       ├── sleepy-stars.mjs    twinkle, dozing moon, Zs, shooting stars, sheep over a fence (0–36 m)
+│       ├── flashcards.mjs      LEARN cards (emoji / drawn shape / count grid) with narration cues
+│       ├── story.mjs           picture-book pages: backdrop + emoji tableau + caption, cross-fades
+│       └── index.mjs           registry
+├── specs/                    sensory-30min · sleepy-60min · learn-colors-shapes · story-jack-and-the-beanstalk
+│                             · demo-3min · background-sample-3min
+├── preview/                  index.html (live scene preview) + serve.mjs (static server)
+├── content/                  stories/*.json, rhymes/mother-goose.json, lessons.json  ← being written
+├── research/                 scrape_channel.py (yt-dlp, metadata only), analyze.py, heybear-notes.md,
+│                             data/heybear.json (+report.md), data/msrachel.json
+├── upload/                   upload.py (YouTube Data API v3, OAuth, resumable, madeForKids) + requirements.txt
+├── assets/fonts/             Fredoka-Variable.ttf (OFL) · assets/voices/ (Piper models, auto-download, gitignored)
+├── test/smoke.mjs            npm test
+├── PLAYBOOK.md               channel strategy, policy checklist, titles/SEO, music rights, 30-day launch plan
+└── README.md                 full usage
+```
+
+Sizes: ~2,300 lines of JS across lib/ + scenes/; ~1,100 lines of Python in research/ + upload/.
+
+## 4. Decisions that matter (don't undo these casually)
+
+1. **Loops are frame-exact.** BPM is snapped so one beat = whole frames (`snapBpm`: 112 → 112.5 at 30 fps; 96 → 94.7; 66 → 66.7). Loop length = melody beats × beat. Video frames and audio samples both come out integers, so repeating a loop 70× produces zero drift. If you change fps, keep it a divisor of 44100 (30 or 25 or 60).
+2. **Music loops are seamless** because the arrangement is rendered twice and the second pass is kept (the first pass's reverb tail sits under the loop start). Don't "optimise" that away.
+3. **Repeats are stream copies.** Each unique loop is x264-encoded once; the concat demuxer repeats it. All segments share codec params so the final concat is also a copy. Only the audio is encoded at mux (AAC 192k, 4 s fade-out).
+4. **Public-domain everything.** Melodies listed in `melodies.mjs` are PD; The Wheels on the Bus, Baby Shark, Happy-and-You-Know-It are deliberately excluded. Piper voices are limited to ones trained from scratch on PD speech (`kristin` default); `lessac` and its fine-tunes (`amy`, `hfc_female`, `jenny`) carry a non-commercial licence and are refused with a warning.
+5. **Distance from Hey Bear.** Original vector fruit characters; no avocado, no bear, no "Dancing Fruit" phrasing in public labels/tags (they claim Hey Bear Sensory® and Mindful Moon® as marks). Scene id stays `dancing-fruits` internally; the public name is "Fruit Friends Dance".
+6. **Made for kids is always on** in `meta.json` and `upload.py`. It disables comments, personalised ads, end screens; RPM planning figure $0.30–1.00 (PLAYBOOK §3).
+7. **Calm positioning.** No cut faster than the loop change, slow drifts, moderate loudness (≈ −18 dBFS RMS). This is deliberate: the overstimulation critique of the genre is real (PLAYBOOK §2) and YouTube's July-2025 "inauthentic content" policy targets mass-produced templated uploads (PLAYBOOK §3). Two distinct long-form uploads a week, not a firehose.
+
+## 5. What was verified here (2026-09-19, sandbox)
+
+- `node test/smoke.mjs`: 6 scenes render non-blank; 9 melodies render finite, frame-aligned loops; WAV round-trip; 1 s video encodes; specs validate (content checks pending the library).
+- Melody pitch check: Twinkle's first note measures 522.5 Hz (C5), beat 4 = 880 Hz (A5). Loop seam discontinuity 0.002.
+- Mini episode (title + fruit loop ×3 + sleepy loop): 1 min 57 s, 1920×1080, h264 High, AAC 44.1k stereo, built in 29 s; mean loudness −21 dB before the master gain bump, peaks −4.6 dB.
+- Preview page renders all scenes in headless Chromium with Fredoka + colour emoji.
+- 1080p render speed: 25 fps (dancing-fruits, 5 s test). Music render: 1–4 s per loop.
+- Live scrape of @HeyBear (90 videos, deep) and @msrachel (126, flat) succeeded; report in `research/data/heybear-report.md`.
+
+## 6. Research headline (from the real scrape, not estimates)
+
+- Hey Bear: 90 videos, 3.22 B views, median 10.8 M views/video. **10–30-minute videos are 30 % of uploads but 79 % of all views (median 46 M)**; Shorts are 41 % of uploads and 7 % of views. Top-quartile videos median 18 min. Cadence 1.7 uploads/month over the last 12 months, median gap 29 days. Titles: `Hey Bear Sensory - {Theme}! - {descriptor}`, 76 chars, no emoji, "sensory" in 97 %. ~42 tags per video (soothing, sensory, tracking, visual development…). 0 % use chapter timestamps — an easy differentiator for us.
+- Ms Rachel: 126 videos, 17.3 B views, median length 45 min.
+- Full numbers, top-15 table, tag list: `research/data/heybear-report.md`; raw: `heybear.json`.
+
+## 7. HANDS NEEDED (pre-approved, paste don't review)
+
+1. **Own repo.** This lives on a paper-plate branch (same pattern as GhostCut before it moved). Create `joshuagrigson/babyloop` on github.com/new, then:
+   ```bash
+   git clone https://github.com/joshuagrigson/paper-plate && cd paper-plate
+   git checkout claude/magical-gauss-mtxsrl
+   git subtree split --prefix=babyloop -b babyloop-main
+   git push https://github.com/joshuagrigson/babyloop babyloop-main:main
+   ```
+   Then set the default branch to `main` at github.com/joshuagrigson/babyloop/settings/branches (the standing default-branch item).
+2. **YouTube upload credentials.** console.cloud.google.com → new project → enable "YouTube Data API v3" → OAuth consent screen (External, add your Gmail as test user) → Credentials → OAuth client ID (Desktop app) → download JSON → save as `babyloop/upload/client_secret.json`. Then `pip install -r upload/requirements.txt` and `python upload/upload.py out/sensory-30min/sensory-30min.mp4 --meta out/sensory-30min/meta.json --thumbnail out/sensory-30min/thumbnail.png --privacy private`.
+3. **Channel name.** PLAYBOOK §7 lists eight candidates (Bloomloop, Hushpetal, Pip & Pear, Tinyorbit, Dozydot, Moonpebble, Littlelumen, Slowstar) — check handle + .com + USPTO the same day. Put the chosen name in each spec's `title`/`thumbnailText`.
+4. **Windows only:** install a colour emoji font is not needed (Segoe UI Emoji ships), but confirm `node bin/babyloop.mjs doctor` shows an emoji family; on Linux `apt install fonts-noto-color-emoji`.
+
+## 8. Open items / next steps
+
+- **Content library** (`content/`): six story retellings, 12 Mother Goose rhymes, lessons.json — in progress; `specs/demo-3min.json`, `story-jack…`, `learn-colors-shapes.json` need it. Loop-only specs do not.
+- **Shorts:** add a 9:16 render path (`width: 1080, height: 1920`) — scenes are resolution-independent, only the thumbnail/title layout assumes 16:9.
+- **More scenes** for variety across weeks: farm animals parade, vehicles, rainbow rain, shapes garden. Each is a ~120-line module; see README "Adding a scene".
+- **Voice A/B:** `ljspeech` (high) vs `kristin` (medium); or OpenAI TTS via `BABYLOOP_TTS=openai` if a warmer voice is worth the cost.
+- **Loudness:** target ≈ −16 LUFS integrated; currently ≈ −18 to −19 dBFS RMS. Check one upload in YouTube's "Stats for nerds" (content loudness) and adjust `master()` targets in `music.mjs`.

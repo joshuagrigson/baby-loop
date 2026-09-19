@@ -1,0 +1,15 @@
+{
+  "id": "story-jack",
+  "title": "Jack and the Beanstalk | Bedtime Story for Toddlers + Nursery Rhymes & Lullaby",
+  "thumbnailText": "Jack and the | Beanstalk",
+  "hook": "A slow, gentle retelling of Jack and the Beanstalk for little listeners, followed by two Mother Goose rhymes and a lullaby wind-down.",
+  "seed": 33,
+  "voice": "kristin",
+  "speechRate": 1.15,
+  "segments": [
+    { "type": "story", "story": "jack-and-the-beanstalk", "bpm": 66, "melody": "brahms", "music": "lullaby" },
+    { "type": "rhyme", "rhyme": "twinkle-twinkle-little-star", "bpm": 88, "music": "learn" },
+    { "type": "rhyme", "rhyme": "hey-diddle-diddle", "bpm": 96, "music": "learn" },
+    { "type": "loop", "scene": "sleepy-stars", "label": "Lullaby wind-down", "minutes": 4, "bpm": 66, "melody": "twinkle", "music": "lullaby", "seed": 301 }
+  ]
+}

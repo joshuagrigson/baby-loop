@@ -1,0 +1,20 @@
+{
+  "id": "learn-colors-shapes",
+  "title": "Learn Colors, Shapes, Numbers & Animal Sounds | Toddler Learning Video",
+  "thumbnailText": "Colors & Shapes | for Toddlers",
+  "hook": "Slow-paced flashcards with clear narration and pauses: colors, shapes, counting to ten, animal sounds and first words, with a dancing-fruit break in the middle.",
+  "seed": 55,
+  "voice": "kristin",
+  "speechRate": 1.15,
+  "segments": [
+    { "type": "title", "text": "Let's Learn!", "caption": "Colors · Shapes · Numbers", "seconds": 4, "props": ["🔴", "🟦", "🔺"] },
+    { "type": "lesson", "lesson": "colors", "bpm": 94, "music": "learn", "perCard": 6 },
+    { "type": "lesson", "lesson": "shapes", "bpm": 94, "music": "learn", "perCard": 6 },
+    { "type": "loop", "scene": "dancing-fruits", "label": "Dance break", "minutes": 2, "bpm": 112, "melody": "mary", "music": "dance", "seed": 501 },
+    { "type": "lesson", "lesson": "numbers", "bpm": 94, "music": "learn", "perCard": 6 },
+    { "type": "lesson", "lesson": "animals", "bpm": 94, "music": "learn", "perCard": 6 },
+    { "type": "loop", "scene": "bubbles", "label": "Bubble break", "minutes": 2, "bpm": 96, "melody": "frere", "music": "learn", "seed": 502 },
+    { "type": "lesson", "lesson": "firstWords", "bpm": 94, "music": "learn", "perCard": 5.5 },
+    { "type": "loop", "scene": "sleepy-stars", "label": "Wind-down", "minutes": 2, "bpm": 66, "melody": "brahms", "music": "lullaby", "seed": 503 }
+  ]
+}

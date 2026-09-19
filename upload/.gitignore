@@ -1,0 +1,3 @@
+# OAuth secrets - never commit these
+token.json
+client_secret.json

@@ -1,0 +1,15 @@
+{
+  "id": "sleepy-60min",
+  "title": "Sleepy Stars Lullaby | Brahms, Twinkle & Soft Music Box | 1 Hour Baby Sleep",
+  "thumbnailText": "Sleepy Stars | Lullaby · 1 Hour",
+  "hook": "One hour of slow, dim, drifting animation and soft music-box lullabies — Brahms, Twinkle Twinkle and original tunes — for winding down.",
+  "seed": 44,
+  "segments": [
+    { "type": "loop", "scene": "sleepy-stars", "label": "Brahms' Lullaby", "minutes": 12, "bpm": 66, "melody": "brahms", "music": "lullaby", "seed": 401 },
+    { "type": "loop", "scene": "bubbles", "label": "Slow bubbles", "minutes": 8, "bpm": 60, "melody": "twinkle", "music": "lullaby", "seed": 402, "palette": "pastel", "options": { "count": 18 } },
+    { "type": "loop", "scene": "sleepy-stars", "label": "Twinkle Twinkle (music box)", "minutes": 12, "bpm": 66, "melody": "twinkle", "music": "lullaby", "seed": 403 },
+    { "type": "loop", "scene": "sleepy-stars", "label": "Original lullaby", "minutes": 10, "bpm": 63, "melody": "generated", "music": "lullaby", "seed": 404 },
+    { "type": "loop", "scene": "bubbles", "label": "Slow bubbles II", "minutes": 8, "bpm": 60, "melody": "mary", "music": "lullaby", "seed": 405, "palette": "pastel", "options": { "count": 16 } },
+    { "type": "loop", "scene": "sleepy-stars", "label": "Brahms' Lullaby (reprise)", "minutes": 10, "bpm": 66, "melody": "brahms", "music": "lullaby", "seed": 406 }
+  ]
+}

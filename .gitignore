@@ -1,0 +1,10 @@
+node_modules/
+out/
+.tts-cache/
+*.mp4
+*.wav
+assets/voices/*.onnx
+assets/voices/*.onnx.json
+upload/token.json
+upload/client_secret.json
+research/data/*.csv

@@ -1,0 +1,22 @@
+{
+  "name": "babyloop",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Faceless baby & toddler video factory: beat-synced canvas loops + procedural nursery music + offline narration, assembled into long-form YouTube episodes.",
+  "type": "module",
+  "bin": { "babyloop": "bin/babyloop.mjs" },
+  "scripts": {
+    "scenes": "node bin/babyloop.mjs scenes",
+    "preview": "node preview/serve.mjs",
+    "demo": "node bin/babyloop.mjs episode specs/demo-3min.json --out-dir out/demo",
+    "sensory30": "node bin/babyloop.mjs episode specs/sensory-30min.json --out-dir out/sensory-30",
+    "story-jack": "node bin/babyloop.mjs episode specs/story-jack-and-the-beanstalk.json --out-dir out/story-jack",
+    "sleepy60": "node bin/babyloop.mjs episode specs/sleepy-60min.json --out-dir out/sleepy-60",
+    "learn": "node bin/babyloop.mjs episode specs/learn-colors-shapes.json --out-dir out/learn",
+    "test": "node test/smoke.mjs"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.60"
+  }
+}

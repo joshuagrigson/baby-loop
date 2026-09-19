@@ -1,0 +1,5 @@
+# babyloop/upload -- YouTube Data API v3 uploader
+# python -m pip install -r requirements.txt
+google-api-python-client>=2.100
+google-auth-oauthlib>=1.2
+google-auth-httplib2>=0.2

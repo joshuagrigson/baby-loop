@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>BabyLoop Preview</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" href="data:," />
+<style>
+  @font-face { font-family: "Fredoka"; src: url("../assets/fonts/Fredoka-Variable.ttf") format("truetype"); font-weight: 300 700; }
+  :root { --bg: #111318; --panel: #1b1f29; --ink: #e9ecf1; --muted: #9aa3b2; --accent: #ffd400; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.4 system-ui, sans-serif; }
+  header { display: flex; gap: 12px; align-items: center; padding: 10px 16px; background: var(--panel); flex-wrap: wrap; }
+  header h1 { font: 700 16px "Fredoka", system-ui; margin: 0 12px 0 0; color: var(--accent); }
+  label { color: var(--muted); display: inline-flex; gap: 6px; align-items: center; }
+  input, select, button { background: #0f1218; color: var(--ink); border: 1px solid #2c3242; border-radius: 6px; padding: 5px 8px; font: inherit; }
+  input[type=number] { width: 78px; }
+  button { cursor: pointer; }
+  button.primary { background: var(--accent); color: #111; border-color: var(--accent); font-weight: 700; }
+  main { padding: 16px; display: grid; gap: 12px; justify-items: center; }
+  canvas { width: min(100%, 1120px); aspect-ratio: 16/9; background: #000; border-radius: 10px; box-shadow: 0 10px 40px #0008; }
+  .row { display: flex; gap: 12px; align-items: center; width: min(100%, 1120px); flex-wrap: wrap; }
+  input[type=range] { flex: 1; min-width: 200px; }
+  .stat { color: var(--muted); font-variant-numeric: tabular-nums; }
+  .hint { color: var(--muted); max-width: 1120px; }
+  code { background: #0f1218; padding: 1px 5px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>BabyLoop preview</h1>
+  <label>scene <select id="scene"></select></label>
+  <label>seed <input id="seed" type="number" value="1" min="0" step="1" /></label>
+  <label>bpm <input id="bpm" type="number" value="112" min="40" max="180" step="0.5" /></label>
+  <label>loop s <input id="loop" type="number" value="25.6" min="4" max="120" step="0.1" /></label>
+  <label>palette <select id="palette"><option value="">scene default</option><option>primary</option><option>pastel</option><option>newborn</option></select></label>
+  <button id="play" class="primary">Pause</button>
+  <button id="png">Save PNG</button>
+  <button id="reload">Reload modules</button>
+</header>
+<main>
+  <canvas id="c" width="1280" height="720"></canvas>
+  <div class="row"><input id="scrub" type="range" min="0" max="1000" value="0" /><span class="stat" id="stat">t 0.00 s · beat 0.0</span></div>
+  <p class="hint">Same scene code the renderer uses; only the clock differs. Beat = t·bpm/60, phase = t/loop. Render this exact scene with
+    <code>node bin/babyloop.mjs render &lt;scene&gt; --seed N --bpm B --seconds L</code>. Timeline scenes (story, flashcards) preview with their built-in sample pages.</p>
+</main>
+<script type="module">
+  let SCENES, sceneInfo, frameInfo;
+  async function loadModules() {
+    const bust = `?v=${Date.now()}`;
+    ({ SCENES } = await import(`../lib/scenes/index.mjs${bust}`));
+    ({ sceneInfo, frameInfo } = await import(`../lib/info.mjs${bust}`));
+  }
+  await loadModules();
+  await document.fonts.load('700 40px Fredoka').catch(() => {});
+
+  const $ = (id) => document.getElementById(id);
+  const canvas = $('c'), ctx = canvas.getContext('2d');
+  const sel = $('scene');
+  for (const s of Object.values(SCENES)) { const o = document.createElement('option'); o.value = s.id; o.textContent = `${s.name} (${s.ageBand})`; sel.appendChild(o); }
+  const params = new URLSearchParams(location.search);
+  if (params.get('scene')) sel.value = params.get('scene');
+
+  let state, info, scene, playing = true, t = 0, last = performance.now();
+  function rebuild() {
+    scene = SCENES[sel.value];
+    const seconds = Number($('loop').value), bpm = Number($('bpm').value), seed = Number($('seed').value);
+    const options = {}; if ($('palette').value) options.palette = $('palette').value;
+    info = sceneInfo({ scene, width: canvas.width, height: canvas.height, fps: 60, seconds, seed, bpm, options });
+    state = scene.init(info);
+    if (state.total) { info.seconds = state.total; info.loopSeconds = state.total; }
+    t = 0;
+  }
+  function draw() {
+    const now = performance.now();
+    if (playing) t = (t + (now - last) / 1000) % info.seconds;
+    last = now;
+    ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1;
+    scene.draw(ctx, t, state, frameInfo(info, t, Math.floor(t * 60)));
+    ctx.restore();
+    $('scrub').value = Math.round((t / info.seconds) * 1000);
+    $('stat').textContent = `t ${t.toFixed(2)} s / ${info.seconds.toFixed(1)} · beat ${((t * info.bpm) / 60).toFixed(1)} · phase ${(t / info.seconds).toFixed(3)}`;
+    requestAnimationFrame(draw);
+  }
+  sel.onchange = () => { $('bpm').value = SCENES[sel.value].defaults.bpm; rebuild(); };
+  for (const id of ['seed', 'bpm', 'loop', 'palette']) $(id).onchange = rebuild;
+  $('play').onclick = () => { playing = !playing; $('play').textContent = playing ? 'Pause' : 'Play'; };
+  $('scrub').oninput = (e) => { playing = false; $('play').textContent = 'Play'; t = (e.target.value / 1000) * info.seconds; };
+  $('png').onclick = () => { const a = document.createElement('a'); a.download = `${scene.id}-${t.toFixed(2)}s.png`; a.href = canvas.toDataURL('image/png'); a.click(); };
+  $('reload').onclick = async () => { await loadModules(); rebuild(); };
+  $('bpm').value = SCENES[sel.value].defaults.bpm;
+  rebuild();
+  requestAnimationFrame(draw);
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "id": "sensory-30min",
+  "title": "Fruit Friends Dance & Bubbles | Baby Sensory | High Contrast | 30 Minutes",
+  "thumbnailText": "Fruit Friends | Baby Sensory",
+  "hook": "30 minutes of dancing fruit, floating bubbles and a high-contrast interlude for newborns — slow scene changes every few minutes, gentle original music, nothing loud or flashy.",
+  "seed": 21,
+  "segments": [
+    { "type": "title", "text": "Fruit Friends", "caption": "Baby Sensory", "seconds": 4, "props": ["🍓", "🍊", "🍐"] },
+    { "type": "loop", "scene": "dancing-fruits", "label": "Fruit Friends — Twinkle", "minutes": 4, "bpm": 112, "melody": "twinkle", "music": "dance", "seed": 101 },
+    { "type": "loop", "scene": "bubbles", "label": "Bubbles", "minutes": 3, "bpm": 96, "melody": "row", "music": "learn", "seed": 102 },
+    { "type": "loop", "scene": "dancing-fruits", "label": "Fruit Friends — Frère Jacques", "minutes": 4, "bpm": 112, "melody": "frere", "music": "dance", "seed": 103, "options": { "count": 4 } },
+    { "type": "loop", "scene": "high-contrast", "label": "High Contrast (newborn)", "minutes": 3, "bpm": 72, "melody": "mary", "music": "lullaby", "seed": 104 },
+    { "type": "loop", "scene": "dancing-fruits", "label": "Fruit Friends — Old MacDonald", "minutes": 4, "bpm": 112, "melody": "oldmac", "music": "dance", "seed": 105, "options": { "count": 5 } },
+    { "type": "loop", "scene": "bubbles", "label": "Bubbles II", "minutes": 3, "bpm": 96, "melody": "generated", "music": "learn", "seed": 106 },
+    { "type": "loop", "scene": "dancing-fruits", "label": "Fruit Friends — London Bridge", "minutes": 4, "bpm": 112, "melody": "london", "music": "dance", "seed": 107 },
+    { "type": "loop", "scene": "sleepy-stars", "label": "Sleepy Stars (wind-down)", "minutes": 5, "bpm": 66, "melody": "brahms", "music": "lullaby", "seed": 108 }
+  ]
+}
