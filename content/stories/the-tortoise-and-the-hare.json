@@ -1,0 +1,106 @@
+{
+  "id": "the-tortoise-and-the-hare",
+  "title": "The Tortoise and the Hare",
+  "source": "Aesop's fable (ancient Greek, public domain). Original retelling.",
+  "ageBand": "2-5",
+  "moral": "Slow and steady gets you there.",
+  "palette": "meadow",
+  "pages": [
+    {
+      "text": "Once upon a time, a hare and a tortoise lived in a sunny meadow.",
+      "caption": "Hare and tortoise",
+      "scene": { "background": "meadow", "props": ["🐇", "🐢", "🌼"], "motion": "sway" },
+      "sfx": "none"
+    },
+    {
+      "text": "The hare was fast. Zoom, zoom! He loved to hop and race and show off.",
+      "caption": "Zoom, zoom!",
+      "scene": { "background": "meadow", "props": ["🐇", "💨"], "motion": "bounce" },
+      "sfx": "whoosh"
+    },
+    {
+      "text": "The tortoise was slow. Plod, plod. He liked to take his time and look at flowers.",
+      "caption": "Plod, plod",
+      "scene": { "background": "meadow", "props": ["🐢", "🌷"], "motion": "sway" },
+      "sfx": "none"
+    },
+    {
+      "text": "\"You are so slow!\" laughed the hare. \"I could beat you in a race with my eyes shut!\"",
+      "caption": "The hare laughs",
+      "scene": { "background": "sunny", "props": ["🐇", "😆", "🐢"], "motion": "shake" },
+      "sfx": "none"
+    },
+    {
+      "text": "\"Maybe,\" said the tortoise, with a little smile. \"Let's race and see.\"",
+      "caption": "Let's race!",
+      "scene": { "background": "sunny", "props": ["🐢", "🙂"], "motion": "still" },
+      "sfx": "pop"
+    },
+    {
+      "text": "All the animals came to watch. The owl said, \"Ready, steady... GO!\"",
+      "caption": "Ready, steady, go!",
+      "scene": { "background": "meadow", "props": ["🦉", "🐇", "🐢", "🐿️"], "motion": "bounce" },
+      "sfx": "boing"
+    },
+    {
+      "text": "Zoom! The hare shot off like the wind. He was gone in a flash.",
+      "caption": "Off like the wind",
+      "scene": { "background": "meadow", "props": ["🐇", "💨", "💨"], "motion": "bounce" },
+      "sfx": "whoosh"
+    },
+    {
+      "text": "Plod, plod, plod. The tortoise set off too. One step. Then another. Then another.",
+      "caption": "One step at a time",
+      "scene": { "background": "meadow", "props": ["🐢"], "motion": "sway" },
+      "sfx": "none"
+    },
+    {
+      "text": "The hare looked back. No tortoise anywhere! \"I have lots of time,\" he said.",
+      "caption": "Lots of time",
+      "scene": { "background": "sunny", "props": ["🐇", "🌳"], "motion": "still" },
+      "sfx": "none"
+    },
+    {
+      "text": "He found a shady tree. He lay down for a tiny nap. Zzz, zzz, zzz.",
+      "caption": "A tiny nap",
+      "scene": { "background": "forest", "props": ["🐇", "🌳", "💤"], "motion": "float" },
+      "sfx": "none"
+    },
+    {
+      "text": "Plod, plod, plod. The tortoise kept on going. Past the tree. Past the sleeping hare.",
+      "caption": "Past the hare",
+      "scene": { "background": "forest", "props": ["🐢", "🌳", "💤"], "motion": "sway" },
+      "sfx": "none"
+    },
+    {
+      "text": "Plod, plod, plod. Up the hill. Round the bend. The tortoise did not stop.",
+      "caption": "Up the hill",
+      "scene": { "background": "sunny", "props": ["🐢", "⛰️"], "motion": "grow" },
+      "sfx": "none"
+    },
+    {
+      "text": "The hare woke up with a yawn. He looked down the road. \"Oh no!\" Zoom!",
+      "caption": "Oh no!",
+      "scene": { "background": "sunny", "props": ["🐇", "😮", "💨"], "motion": "shake" },
+      "sfx": "boing"
+    },
+    {
+      "text": "But it was too late. Plod, plod... The tortoise crossed the finish line first!",
+      "caption": "Tortoise wins!",
+      "scene": { "background": "meadow", "props": ["🐢", "🏁", "🦉"], "motion": "bounce" },
+      "sfx": "sparkle"
+    },
+    {
+      "text": "The hare puffed up, out of breath. \"You won,\" he said. \"Well done, Tortoise.\"",
+      "caption": "Well done, Tortoise",
+      "scene": { "background": "meadow", "props": ["🐇", "🐢", "🏁"], "motion": "sway" },
+      "sfx": "none"
+    },
+    {
+      "text": "\"Thank you,\" said the tortoise. \"Shall we walk home together?\" And they did, slow and steady. The end.",
+      "caption": "Home together",
+      "scene": { "background": "night", "props": ["🐢", "🐇", "🌙"], "motion": "float" },
+      "sfx": "sparkle"
+    }
+  ]
+}

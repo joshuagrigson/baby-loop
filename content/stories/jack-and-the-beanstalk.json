@@ -1,0 +1,27 @@
+{
+  "id": "jack-and-the-beanstalk",
+  "title": "Jack and the Beanstalk",
+  "source": "English fairy tale (Joseph Jacobs, 1890, public domain). Original retelling.",
+  "ageBand": "2-5",
+  "moral": "Be brave, be kind, and always come home to the people who love you.",
+  "palette": "meadow",
+  "pages": [
+    { "text": "Once upon a time, a boy named Jack lived with his mother in a tiny house.", "caption": "Jack and his mother", "scene": { "background": "meadow", "props": ["🏠", "👦", "👩"], "motion": "sway" }, "sfx": "none" },
+    { "text": "They had one cow. Her name was Milky-White. Moo!", "caption": "Milky-White the cow", "scene": { "background": "meadow", "props": ["👦", "🐄"], "motion": "bounce" }, "sfx": "none" },
+    { "text": "One day the cupboard was empty. \"Jack,\" said his mother, \"please take Milky-White to market.\"", "caption": "Off to market", "scene": { "background": "sunny", "props": ["👩", "👦", "🐄"], "motion": "sway" }, "sfx": "none" },
+    { "text": "On the road Jack met a funny old man. \"I will trade you five magic beans for your cow.\"", "caption": "Five magic beans", "scene": { "background": "sunny", "props": ["🧙", "🫘", "👦"], "motion": "float" }, "sfx": "sparkle" },
+    { "text": "Jack loved magic. So he said yes! He ran home with the beans in his pocket.", "caption": "Yes, please!", "scene": { "background": "meadow", "props": ["👦", "🫘"], "motion": "bounce" }, "sfx": "pop" },
+    { "text": "His mother was not happy. \"Beans? Oh, Jack!\" She tossed them out of the window.", "caption": "Out the window", "scene": { "background": "cottage", "props": ["👩", "🫘", "🪟"], "motion": "shake" }, "sfx": "whoosh" },
+    { "text": "In the morning, Jack looked outside. A giant beanstalk had grown up, up, up into the clouds!", "caption": "Up, up, up!", "scene": { "background": "sky", "props": ["🌱", "🌿", "☁️"], "motion": "grow" }, "sfx": "sparkle" },
+    { "text": "Jack climbed and climbed. Higher than the birds. Higher than the clouds.", "caption": "Climb, Jack, climb", "scene": { "background": "sky", "props": ["👦", "🌿", "🐦"], "motion": "float" }, "sfx": "none" },
+    { "text": "At the top was a big, big castle. Jack tiptoed to the door. Knock, knock!", "caption": "A giant castle", "scene": { "background": "castle", "props": ["👦", "🏰"], "motion": "sway" }, "sfx": "knock" },
+    { "text": "Inside lived a giant. \"Fee, fi, fo, fum!\" he boomed. Jack hid behind a big brown pot.", "caption": "Fee, fi, fo, fum!", "scene": { "background": "castle", "props": ["🧌", "🍯", "👦"], "motion": "shake" }, "sfx": "boing" },
+    { "text": "The giant had a hen. When the hen sat down, she laid an egg made of gold!", "caption": "The golden egg", "scene": { "background": "castle", "props": ["🐔", "🥚", "✨"], "motion": "bounce" }, "sfx": "sparkle" },
+    { "text": "Soon the giant fell asleep. Snore! Snore! Jack picked up the hen very, very gently.", "caption": "Shh, he is sleeping", "scene": { "background": "night", "props": ["🧌", "💤", "👦", "🐔"], "motion": "still" }, "sfx": "none" },
+    { "text": "Jack ran to the beanstalk and slid all the way down. Wheee!", "caption": "Wheee!", "scene": { "background": "sky", "props": ["👦", "🌿", "🐔"], "motion": "float" }, "sfx": "whoosh" },
+    { "text": "The giant woke up and stomped after him. Stomp! Stomp! But he was much too big to climb down.", "caption": "Stomp, stomp!", "scene": { "background": "sky", "props": ["🧌", "☁️"], "motion": "shake" }, "sfx": "boing" },
+    { "text": "Jack fetched an axe. Chop, chop, chop! Down came the beanstalk, and the giant stayed up in the clouds forever.", "caption": "Chop, chop, chop", "scene": { "background": "meadow", "props": ["👦", "🪓", "🌿"], "motion": "shake" }, "sfx": "pop" },
+    { "text": "The little hen laid golden eggs every day. Jack and his mother never went hungry again.", "caption": "Golden eggs every day", "scene": { "background": "cottage", "props": ["👩", "👦", "🐔", "🥚"], "motion": "bounce" }, "sfx": "sparkle" },
+    { "text": "And Jack was always brave, always kind, and always home for supper. The end.", "caption": "Home for supper", "scene": { "background": "sunny", "props": ["🏠", "👦", "👩", "🐔"], "motion": "sway" }, "sfx": "none" }
+  ]
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "id": "humpty-dumpty",
+    "title": "Humpty Dumpty",
+    "source": "Traditional, public domain",
+    "lines": ["Humpty Dumpty sat on a wall,", "Humpty Dumpty had a great fall.", "All the king's horses and all the king's men", "couldn't put Humpty together again."],
+    "palette": "castle",
+    "scene": { "background": "castle", "props": ["🥚", "🧱"], "motion": "sway" },
+    "melody": null
+  },
+  {
+    "id": "hey-diddle-diddle",
+    "title": "Hey Diddle Diddle",
+    "source": "Traditional, public domain",
+    "lines": ["Hey diddle diddle, the cat and the fiddle,", "the cow jumped over the moon.", "The little dog laughed to see such sport,", "and the dish ran away with the spoon."],
+    "palette": "night",
+    "scene": { "background": "night", "props": ["🐱", "🎻", "🐄", "🌙"], "motion": "bounce" },
+    "melody": null
+  },
+  {
+    "id": "twinkle-twinkle-little-star",
+    "title": "Twinkle, Twinkle, Little Star",
+    "source": "Jane Taylor, 1806, public domain (verse 1)",
+    "lines": ["Twinkle, twinkle, little star,", "how I wonder what you are.", "Up above the world so high,", "like a diamond in the sky.", "Twinkle, twinkle, little star,", "how I wonder what you are."],
+    "palette": "night",
+    "scene": { "background": "night", "props": ["⭐", "🌙", "✨"], "motion": "float" },
+    "melody": "twinkle"
+  },
+  {
+    "id": "hickory-dickory-dock",
+    "title": "Hickory Dickory Dock",
+    "source": "Traditional, public domain",
+    "lines": ["Hickory dickory dock,", "the mouse ran up the clock.", "The clock struck one,", "the mouse ran down,", "hickory dickory dock."],
+    "palette": "cottage",
+    "scene": { "background": "cottage", "props": ["🐭", "🕰️"], "motion": "shake" },
+    "melody": null
+  },
+  {
+    "id": "baa-baa-black-sheep",
+    "title": "Baa, Baa, Black Sheep",
+    "source": "Traditional, 1744, public domain",
+    "lines": ["Baa, baa, black sheep, have you any wool?", "Yes sir, yes sir, three bags full.", "One for the master, and one for the dame,", "and one for the little boy who lives down the lane."],
+    "palette": "meadow",
+    "scene": { "background": "meadow", "props": ["🐑", "🧶", "🧶", "🧶"], "motion": "sway" },
+    "melody": "twinkle"
+  },
+  {
+    "id": "jack-and-jill",
+    "title": "Jack and Jill",
+    "source": "Traditional, public domain (verse 1)",
+    "lines": ["Jack and Jill went up the hill", "to fetch a pail of water.", "Jack fell down and broke his crown,", "and Jill came tumbling after."],
+    "palette": "sunny",
+    "scene": { "background": "sunny", "props": ["👦", "👧", "🪣"], "motion": "bounce" },
+    "melody": null
+  },
+  {
+    "id": "little-bo-peep",
+    "title": "Little Bo-Peep",
+    "source": "Traditional, public domain (verse 1)",
+    "lines": ["Little Bo-Peep has lost her sheep,", "and doesn't know where to find them.", "Leave them alone, and they'll come home,", "wagging their tails behind them."],
+    "palette": "meadow",
+    "scene": { "background": "meadow", "props": ["👧", "🐑", "🐑"], "motion": "sway" },
+    "melody": null
+  },
+  {
+    "id": "itsy-bitsy-spider",
+    "title": "The Itsy Bitsy Spider",
+    "source": "Traditional, 1910, public domain",
+    "lines": ["The itsy bitsy spider climbed up the water spout.", "Down came the rain and washed the spider out.", "Out came the sun and dried up all the rain,", "and the itsy bitsy spider climbed up the spout again."],
+    "palette": "sunny",
+    "scene": { "background": "sunny", "props": ["🕷️", "🌧️", "☀️"], "motion": "float" },
+    "melody": "itsy"
+  },
+  {
+    "id": "little-miss-muffet",
+    "title": "Little Miss Muffet",
+    "source": "Traditional, public domain",
+    "lines": ["Little Miss Muffet sat on a tuffet,", "eating her curds and whey.", "Along came a spider, who sat down beside her,", "and frightened Miss Muffet away."],
+    "palette": "meadow",
+    "scene": { "background": "meadow", "props": ["👧", "🥣", "🕷️"], "motion": "sway" },
+    "melody": null
+  },
+  {
+    "id": "mary-had-a-little-lamb",
+    "title": "Mary Had a Little Lamb",
+    "source": "Sarah Josepha Hale, 1830, public domain (verse 1)",
+    "lines": ["Mary had a little lamb,", "its fleece was white as snow.", "And everywhere that Mary went,", "the lamb was sure to go."],
+    "palette": "meadow",
+    "scene": { "background": "meadow", "props": ["👧", "🐑"], "motion": "bounce" },
+    "melody": "mary"
+  },
+  {
+    "id": "old-macdonald-had-a-farm",
+    "title": "Old MacDonald Had a Farm",
+    "source": "Traditional, public domain",
+    "lines": ["Old MacDonald had a farm, E-I-E-I-O!", "And on that farm he had a cow, E-I-E-I-O!", "With a moo moo here and a moo moo there,", "here a moo, there a moo, everywhere a moo moo.", "Old MacDonald had a farm, E-I-E-I-O!", "And on that farm he had a pig, E-I-E-I-O!", "With an oink oink here and an oink oink there,", "here an oink, there an oink, everywhere an oink oink.", "Old MacDonald had a farm, E-I-E-I-O!", "And on that farm he had a duck, E-I-E-I-O!", "With a quack quack here and a quack quack there,", "here a quack, there a quack, everywhere a quack quack.", "Old MacDonald had a farm, E-I-E-I-O!"],
+    "palette": "meadow",
+    "scene": { "background": "meadow", "props": ["👨‍🌾", "🐄", "🐷", "🦆"], "motion": "bounce" },
+    "melody": "oldmac"
+  },
+  {
+    "id": "row-row-row-your-boat",
+    "title": "Row, Row, Row Your Boat",
+    "source": "Traditional, 1852, public domain",
+    "lines": ["Row, row, row your boat,", "gently down the stream.", "Merrily, merrily, merrily, merrily,", "life is but a dream."],
+    "palette": "ocean",
+    "scene": { "background": "ocean", "props": ["🚣", "🌊"], "motion": "float" },
+    "melody": "row"
+  }
+]

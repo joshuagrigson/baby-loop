@@ -1,0 +1,106 @@
+{
+  "id": "three-little-pigs",
+  "title": "The Three Little Pigs",
+  "source": "English fairy tale (Joseph Jacobs, 1890, public domain). Original retelling.",
+  "ageBand": "2-5",
+  "moral": "Slow, careful work builds something strong.",
+  "palette": "meadow",
+  "pages": [
+    {
+      "text": "Once upon a time, three little pigs set off to build their own houses.",
+      "caption": "Three little pigs",
+      "scene": { "background": "meadow", "props": ["🐷", "🐷", "🐷"], "motion": "bounce" },
+      "sfx": "none"
+    },
+    {
+      "text": "The first little pig found some straw. Swish, swish! A straw house, quick as a wink.",
+      "caption": "A house of straw",
+      "scene": { "background": "meadow", "props": ["🐷", "🌾", "🏠"], "motion": "sway" },
+      "sfx": "pop"
+    },
+    {
+      "text": "The second little pig found some sticks. Tap, tap! A stick house, done by lunch.",
+      "caption": "A house of sticks",
+      "scene": { "background": "forest", "props": ["🐷", "🪵", "🏠"], "motion": "shake" },
+      "sfx": "knock"
+    },
+    {
+      "text": "The third little pig found some bricks. Brick by brick, slow and steady, all day long.",
+      "caption": "A house of bricks",
+      "scene": { "background": "sunny", "props": ["🐷", "🧱", "🧱", "🏡"], "motion": "grow" },
+      "sfx": "none"
+    },
+    {
+      "text": "Along came a big grey wolf. He was hungry, and he was sneaky.",
+      "caption": "Along came a wolf",
+      "scene": { "background": "forest", "props": ["🐺"], "motion": "sway" },
+      "sfx": "whoosh"
+    },
+    {
+      "text": "The wolf knocked on the straw house. Knock, knock! \"Little pig, let me in!\"",
+      "caption": "Knock, knock!",
+      "scene": { "background": "meadow", "props": ["🐺", "🏠", "🐷"], "motion": "shake" },
+      "sfx": "knock"
+    },
+    {
+      "text": "\"No, no, no!\" said the little pig. \"Not by the hair on my chinny-chin-chin!\"",
+      "caption": "No, no, no!",
+      "scene": { "background": "meadow", "props": ["🐷", "🏠"], "motion": "bounce" },
+      "sfx": "none"
+    },
+    {
+      "text": "So the wolf huffed and he puffed. Huff and puff! The straw house blew away.",
+      "caption": "Huff and puff!",
+      "scene": { "background": "sky", "props": ["🐺", "💨", "🌾"], "motion": "float" },
+      "sfx": "whoosh"
+    },
+    {
+      "text": "The first pig ran to the stick house. The wolf came too. Knock, knock!",
+      "caption": "Run to the sticks",
+      "scene": { "background": "forest", "props": ["🐷", "🐷", "🏠", "🐺"], "motion": "bounce" },
+      "sfx": "knock"
+    },
+    {
+      "text": "\"No, no, no!\" said the pigs. \"Not by the hair on our chinny-chin-chins!\"",
+      "caption": "Two pigs say no",
+      "scene": { "background": "forest", "props": ["🐷", "🐷", "🏠"], "motion": "shake" },
+      "sfx": "none"
+    },
+    {
+      "text": "Huff and puff! Huff and puff! The stick house tumbled down, sticks everywhere.",
+      "caption": "Sticks everywhere",
+      "scene": { "background": "sky", "props": ["🐺", "💨", "🪵", "🪵"], "motion": "float" },
+      "sfx": "whoosh"
+    },
+    {
+      "text": "Both pigs ran to the brick house. The third pig opened the door. \"Come in, quick!\"",
+      "caption": "Safe in the bricks",
+      "scene": { "background": "sunny", "props": ["🐷", "🐷", "🐷", "🏡"], "motion": "bounce" },
+      "sfx": "pop"
+    },
+    {
+      "text": "The wolf huffed and puffed. He puffed and huffed. But the brick house did not move.",
+      "caption": "Bricks stay still",
+      "scene": { "background": "sunny", "props": ["🐺", "💨", "🏡"], "motion": "still" },
+      "sfx": "whoosh"
+    },
+    {
+      "text": "The wolf was so puffed out, he flopped down. Then he gave up and ran away home.",
+      "caption": "Wolf runs home",
+      "scene": { "background": "forest", "props": ["🐺", "🌲"], "motion": "sway" },
+      "sfx": "boing"
+    },
+    {
+      "text": "The three little pigs cheered. Hooray! They built two more brick houses, side by side.",
+      "caption": "Three brick houses",
+      "scene": { "background": "meadow", "props": ["🏡", "🏡", "🏡"], "motion": "grow" },
+      "sfx": "sparkle"
+    },
+    {
+      "text": "And they lived happily, safe and snug, for ever and ever. The end.",
+      "caption": "Happy ever after",
+      "scene": { "background": "night", "props": ["🐷", "🐷", "🐷", "🌙"], "motion": "float" },
+      "sfx": "sparkle"
+    }
+  ]
+}

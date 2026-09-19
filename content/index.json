@@ -1,0 +1,103 @@
+{
+  "stories": [
+    {
+      "id": "goldilocks-and-the-three-bears",
+      "title": "Goldilocks and the Three Bears",
+      "pages": 16
+    },
+    {
+      "id": "jack-and-the-beanstalk",
+      "title": "Jack and the Beanstalk",
+      "pages": 17
+    },
+    {
+      "id": "the-gingerbread-man",
+      "title": "The Gingerbread Man",
+      "pages": 16
+    },
+    {
+      "id": "the-little-red-hen",
+      "title": "The Little Red Hen",
+      "pages": 16
+    },
+    {
+      "id": "the-tortoise-and-the-hare",
+      "title": "The Tortoise and the Hare",
+      "pages": 16
+    },
+    {
+      "id": "three-little-pigs",
+      "title": "The Three Little Pigs",
+      "pages": 16
+    }
+  ],
+  "rhymes": [
+    {
+      "id": "humpty-dumpty",
+      "title": "Humpty Dumpty",
+      "melody": null
+    },
+    {
+      "id": "hey-diddle-diddle",
+      "title": "Hey Diddle Diddle",
+      "melody": null
+    },
+    {
+      "id": "twinkle-twinkle-little-star",
+      "title": "Twinkle, Twinkle, Little Star",
+      "melody": "twinkle"
+    },
+    {
+      "id": "hickory-dickory-dock",
+      "title": "Hickory Dickory Dock",
+      "melody": null
+    },
+    {
+      "id": "baa-baa-black-sheep",
+      "title": "Baa, Baa, Black Sheep",
+      "melody": "twinkle"
+    },
+    {
+      "id": "jack-and-jill",
+      "title": "Jack and Jill",
+      "melody": null
+    },
+    {
+      "id": "little-bo-peep",
+      "title": "Little Bo-Peep",
+      "melody": null
+    },
+    {
+      "id": "itsy-bitsy-spider",
+      "title": "The Itsy Bitsy Spider",
+      "melody": "itsy"
+    },
+    {
+      "id": "little-miss-muffet",
+      "title": "Little Miss Muffet",
+      "melody": null
+    },
+    {
+      "id": "mary-had-a-little-lamb",
+      "title": "Mary Had a Little Lamb",
+      "melody": "mary"
+    },
+    {
+      "id": "old-macdonald-had-a-farm",
+      "title": "Old MacDonald Had a Farm",
+      "melody": "oldmac"
+    },
+    {
+      "id": "row-row-row-your-boat",
+      "title": "Row, Row, Row Your Boat",
+      "melody": "row"
+    }
+  ],
+  "lessons": [
+    "colors",
+    "shapes",
+    "numbers",
+    "animals",
+    "firstWords"
+  ]
+}

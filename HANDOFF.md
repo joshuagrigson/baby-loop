@@ -2,7 +2,7 @@
 
 **For:** whoever produces the actual background videos (a developer, an editor, or another Claude session).
 **Repo:** `joshuagrigson/paper-plate`, branch `claude/magical-gauss-mtxsrl`, folder `babyloop/`.
-**State:** background-video pipeline built and verified end to end at 1920×1080/30 fps with muxed AAC audio. Story/lesson narration pipeline built and unit-verified; its content library (stories, rhymes, lessons JSON) is the one piece still landing.
+**State:** background-video pipeline built and verified end to end at 1920×1080/30 fps with muxed AAC audio. Narration pipeline (stories, rhymes, lessons) built, content library complete (6 stories, 12 rhymes, 5 lesson sets), smoke test green.
 
 ---
 
@@ -77,7 +77,7 @@ babyloop/
 ├── specs/                    sensory-30min · sleepy-60min · learn-colors-shapes · story-jack-and-the-beanstalk
 │                             · demo-3min · background-sample-3min
 ├── preview/                  index.html (live scene preview) + serve.mjs (static server)
-├── content/                  stories/*.json, rhymes/mother-goose.json, lessons.json  ← being written
+├── content/                  stories/*.json (6), rhymes/mother-goose.json (12), lessons.json (5 sets), index.json
 ├── research/                 scrape_channel.py (yt-dlp, metadata only), analyze.py, heybear-notes.md,
 │                             data/heybear.json (+report.md), data/msrachel.json
 ├── upload/                   upload.py (YouTube Data API v3, OAuth, resumable, madeForKids) + requirements.txt
@@ -130,7 +130,7 @@ Sizes: ~2,300 lines of JS across lib/ + scenes/; ~1,100 lines of Python in resea
 
 ## 8. Open items / next steps
 
-- **Content library** (`content/`): six story retellings, 12 Mother Goose rhymes, lessons.json — in progress; `specs/demo-3min.json`, `story-jack…`, `learn-colors-shapes.json` need it. Loop-only specs do not.
+- **Content library** (`content/`): done — six story retellings (16–17 pages each), 12 Mother Goose rhymes, lessons.json. Add more stories by copying any file's shape; add rhymes to `mother-goose.json`.
 - **Shorts:** add a 9:16 render path (`width: 1080, height: 1920`) — scenes are resolution-independent, only the thumbnail/title layout assumes 16:9.
 - **More scenes** for variety across weeks: farm animals parade, vehicles, rainbow rain, shapes garden. Each is a ~120-line module; see README "Adding a scene".
 - **Voice A/B:** `ljspeech` (high) vs `kristin` (medium); or OpenAI TTS via `BABYLOOP_TTS=openai` if a warmer voice is worth the cost.

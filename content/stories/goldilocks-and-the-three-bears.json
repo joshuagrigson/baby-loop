@@ -1,0 +1,106 @@
+{
+  "id": "goldilocks-and-the-three-bears",
+  "title": "Goldilocks and the Three Bears",
+  "source": "English fairy tale (Robert Southey, 1837; Joseph Jacobs, 1890, public domain). Original retelling.",
+  "ageBand": "2-5",
+  "moral": "Always ask before you use what belongs to someone else.",
+  "palette": "cottage",
+  "pages": [
+    {
+      "text": "Once upon a time, three bears lived in a cosy cottage in the woods.",
+      "caption": "Three bears at home",
+      "scene": { "background": "forest", "props": ["🐻", "🐻", "🐻", "🏡"], "motion": "sway" },
+      "sfx": "none"
+    },
+    {
+      "text": "There was a great big Papa Bear, a middle-sized Mama Bear, and a wee little Baby Bear.",
+      "caption": "Papa, Mama, Baby",
+      "scene": { "background": "cottage", "props": ["🐻", "🐻", "🧸"], "motion": "bounce" },
+      "sfx": "pop"
+    },
+    {
+      "text": "One morning, Mama Bear made porridge. But it was too hot! \"Let's go for a walk,\" she said.",
+      "caption": "Porridge too hot",
+      "scene": { "background": "cottage", "props": ["🥣", "🥣", "🥣", "♨️"], "motion": "float" },
+      "sfx": "none"
+    },
+    {
+      "text": "Along came a little girl with golden curls. Her name was Goldilocks.",
+      "caption": "Here comes Goldilocks",
+      "scene": { "background": "forest", "props": ["👧", "🌼"], "motion": "bounce" },
+      "sfx": "sparkle"
+    },
+    {
+      "text": "She peeped in the window. She knocked on the door. Knock, knock! Nobody was home.",
+      "caption": "Knock, knock!",
+      "scene": { "background": "cottage", "props": ["👧", "🚪"], "motion": "shake" },
+      "sfx": "knock"
+    },
+    {
+      "text": "Goldilocks tasted the big bowl of porridge. \"Ooh! Too hot!\"",
+      "caption": "Too hot!",
+      "scene": { "background": "cottage", "props": ["👧", "🥣", "🔥"], "motion": "shake" },
+      "sfx": "pop"
+    },
+    {
+      "text": "She tasted the middle bowl. \"Brr! Too cold!\"",
+      "caption": "Too cold!",
+      "scene": { "background": "cottage", "props": ["👧", "🥣", "❄️"], "motion": "shake" },
+      "sfx": "pop"
+    },
+    {
+      "text": "She tasted the wee little bowl. \"Mmm! Just right!\" And she ate it all up. Slurp!",
+      "caption": "Just right!",
+      "scene": { "background": "cottage", "props": ["👧", "🥣", "🥄"], "motion": "bounce" },
+      "sfx": "sparkle"
+    },
+    {
+      "text": "Goldilocks sat in the big chair. Too hard! She sat in the middle chair. Too soft!",
+      "caption": "Too hard, too soft",
+      "scene": { "background": "cottage", "props": ["👧", "🪑", "🛋️"], "motion": "sway" },
+      "sfx": "none"
+    },
+    {
+      "text": "She sat in the wee little chair. Just right! But then... CRACK! It broke to bits.",
+      "caption": "Crack goes the chair",
+      "scene": { "background": "cottage", "props": ["👧", "🪑", "💥"], "motion": "shake" },
+      "sfx": "boing"
+    },
+    {
+      "text": "Goldilocks was sleepy. The big bed was too high. The middle bed was too bumpy.",
+      "caption": "Too high, too bumpy",
+      "scene": { "background": "cottage", "props": ["👧", "🛏️", "🛏️"], "motion": "sway" },
+      "sfx": "none"
+    },
+    {
+      "text": "The wee little bed was just right. She snuggled down and fell fast asleep. Zzz.",
+      "caption": "Fast asleep",
+      "scene": { "background": "night", "props": ["👧", "🛏️", "💤"], "motion": "float" },
+      "sfx": "none"
+    },
+    {
+      "text": "Home came the three bears. \"Someone has been eating my porridge!\" said Papa Bear.",
+      "caption": "The bears come home",
+      "scene": { "background": "cottage", "props": ["🐻", "🐻", "🧸", "🥣"], "motion": "bounce" },
+      "sfx": "knock"
+    },
+    {
+      "text": "\"Someone has been sitting in my chair!\" said Baby Bear. \"And it is all broken!\"",
+      "caption": "My chair is broken",
+      "scene": { "background": "cottage", "props": ["🧸", "🪑", "😢"], "motion": "shake" },
+      "sfx": "none"
+    },
+    {
+      "text": "\"Someone is sleeping in my bed!\" squeaked Baby Bear. Goldilocks woke up with a jump!",
+      "caption": "Goldilocks wakes up",
+      "scene": { "background": "cottage", "props": ["👧", "🐻", "🐻", "🧸"], "motion": "bounce" },
+      "sfx": "boing"
+    },
+    {
+      "text": "\"I'm sorry,\" said Goldilocks. \"Next time I will knock and wait.\" The bears shared their porridge. The end.",
+      "caption": "Sorry and sharing",
+      "scene": { "background": "sunny", "props": ["👧", "🐻", "🧸", "🥣"], "motion": "sway" },
+      "sfx": "sparkle"
+    }
+  ]
+}

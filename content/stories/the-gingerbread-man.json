@@ -1,0 +1,106 @@
+{
+  "id": "the-gingerbread-man",
+  "title": "The Gingerbread Man",
+  "source": "American folk tale (St. Nicholas Magazine, 1875, public domain). Original retelling.",
+  "ageBand": "2-5",
+  "moral": "Running fast is fun, but home is the best place to be.",
+  "palette": "cottage",
+  "pages": [
+    {
+      "text": "Once upon a time, a little old woman baked a gingerbread man.",
+      "caption": "Baking a treat",
+      "scene": { "background": "cottage", "props": ["👵", "🍪", "🔥"], "motion": "float" },
+      "sfx": "none"
+    },
+    {
+      "text": "She gave him two currant eyes and a big smile. Then she popped him in the oven.",
+      "caption": "Eyes and a smile",
+      "scene": { "background": "cottage", "props": ["👵", "🍪", "😊"], "motion": "sway" },
+      "sfx": "pop"
+    },
+    {
+      "text": "Ding! The oven door opened. Out jumped the gingerbread man! Hop, hop, hop!",
+      "caption": "Out he jumps",
+      "scene": { "background": "cottage", "props": ["🍪", "🚪"], "motion": "bounce" },
+      "sfx": "boing"
+    },
+    {
+      "text": "\"Run, run, as fast as you can! You can't catch me, I'm the gingerbread man!\"",
+      "caption": "Run, run, run!",
+      "scene": { "background": "meadow", "props": ["🍪", "💨"], "motion": "bounce" },
+      "sfx": "whoosh"
+    },
+    {
+      "text": "The little old woman ran after him. The little old man ran after him too. Puff, puff!",
+      "caption": "Puff, puff!",
+      "scene": { "background": "meadow", "props": ["👵", "👴", "🍪"], "motion": "bounce" },
+      "sfx": "none"
+    },
+    {
+      "text": "He ran past a cow. \"Moo! Stop, little man!\" But he did not stop.",
+      "caption": "Past the cow",
+      "scene": { "background": "meadow", "props": ["🐄", "🍪"], "motion": "sway" },
+      "sfx": "pop"
+    },
+    {
+      "text": "\"Run, run, as fast as you can! You can't catch me, I'm the gingerbread man!\"",
+      "caption": "Can't catch me!",
+      "scene": { "background": "sunny", "props": ["🍪", "💨", "🐄"], "motion": "bounce" },
+      "sfx": "whoosh"
+    },
+    {
+      "text": "He ran past a horse. \"Neigh! Stop, little man!\" But he did not stop.",
+      "caption": "Past the horse",
+      "scene": { "background": "meadow", "props": ["🐴", "🍪"], "motion": "sway" },
+      "sfx": "pop"
+    },
+    {
+      "text": "He ran past a pig. \"Oink! Stop, little man!\" But he did not stop. Hop, hop, hop!",
+      "caption": "Past the pig",
+      "scene": { "background": "meadow", "props": ["🐷", "🍪"], "motion": "bounce" },
+      "sfx": "pop"
+    },
+    {
+      "text": "Now everyone was running. The woman, the man, the cow, the horse, and the pig!",
+      "caption": "Everyone is running",
+      "scene": { "background": "sunny", "props": ["👵", "🐄", "🐴", "🐷"], "motion": "shake" },
+      "sfx": "whoosh"
+    },
+    {
+      "text": "Then the gingerbread man came to a wide, wet river. Splash! He could not swim.",
+      "caption": "A wide river",
+      "scene": { "background": "ocean", "props": ["🍪", "🌊"], "motion": "float" },
+      "sfx": "none"
+    },
+    {
+      "text": "A sly fox sat by the water. \"Hop on my tail,\" said the fox. \"I will carry you over.\"",
+      "caption": "A sly fox",
+      "scene": { "background": "ocean", "props": ["🦊", "🍪", "🌊"], "motion": "sway" },
+      "sfx": "none"
+    },
+    {
+      "text": "The gingerbread man looked at the fox's sharp teeth. \"No, thank you!\" he said.",
+      "caption": "No, thank you!",
+      "scene": { "background": "ocean", "props": ["🍪", "🦊"], "motion": "shake" },
+      "sfx": "none"
+    },
+    {
+      "text": "He turned around. \"Run, run, as fast as you can!\" And he ran all the way back home.",
+      "caption": "Running back home",
+      "scene": { "background": "meadow", "props": ["🍪", "💨", "🏡"], "motion": "bounce" },
+      "sfx": "whoosh"
+    },
+    {
+      "text": "The little old woman gave him a hug. \"You are quick,\" she said, \"but you are safe now.\"",
+      "caption": "A warm hug",
+      "scene": { "background": "cottage", "props": ["👵", "🍪", "❤️"], "motion": "grow" },
+      "sfx": "sparkle"
+    },
+    {
+      "text": "And the gingerbread man sat on the windowsill, smiling, happy to be home. The end.",
+      "caption": "Home at last",
+      "scene": { "background": "night", "props": ["🍪", "🪟", "🌙"], "motion": "float" },
+      "sfx": "sparkle"
+    }
+  ]
+}

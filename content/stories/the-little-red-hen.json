@@ -1,0 +1,106 @@
+{
+  "id": "the-little-red-hen",
+  "title": "The Little Red Hen",
+  "source": "Traditional folk tale (English/American, 19th century, public domain). Original retelling.",
+  "ageBand": "2-5",
+  "moral": "If you help with the work, you get to share the treat.",
+  "palette": "sunny",
+  "pages": [
+    {
+      "text": "Once upon a time, a little red hen lived on a farm with her friends.",
+      "caption": "The little red hen",
+      "scene": { "background": "meadow", "props": ["🐔", "🐷", "🐱", "🐶"], "motion": "bounce" },
+      "sfx": "none"
+    },
+    {
+      "text": "One day she found some seeds. \"Cluck, cluck! I could grow wheat with these!\"",
+      "caption": "Some little seeds",
+      "scene": { "background": "meadow", "props": ["🐔", "🌱"], "motion": "grow" },
+      "sfx": "sparkle"
+    },
+    {
+      "text": "\"Who will help me plant the seeds?\" asked the little red hen.",
+      "caption": "Who will help?",
+      "scene": { "background": "sunny", "props": ["🐔", "🌱", "❓"], "motion": "sway" },
+      "sfx": "none"
+    },
+    {
+      "text": "\"Not I,\" said the pig. \"Not I,\" said the cat. \"Not I,\" said the dog.",
+      "caption": "Not I, not I",
+      "scene": { "background": "sunny", "props": ["🐷", "🐱", "🐶"], "motion": "shake" },
+      "sfx": "none"
+    },
+    {
+      "text": "\"Then I will do it myself,\" said the little red hen. And she did. Scratch, scratch, pat.",
+      "caption": "I will do it",
+      "scene": { "background": "meadow", "props": ["🐔", "🌱", "🌱"], "motion": "bounce" },
+      "sfx": "pop"
+    },
+    {
+      "text": "The sun shone. The rain fell. The little seeds grew up tall and golden.",
+      "caption": "Growing tall",
+      "scene": { "background": "sunny", "props": ["☀️", "🌧️", "🌾"], "motion": "grow" },
+      "sfx": "sparkle"
+    },
+    {
+      "text": "\"Who will help me cut the wheat?\" asked the little red hen.",
+      "caption": "Time to cut",
+      "scene": { "background": "meadow", "props": ["🐔", "🌾", "🌾"], "motion": "sway" },
+      "sfx": "none"
+    },
+    {
+      "text": "\"Not I,\" said the pig. \"Not I,\" said the cat. \"Not I,\" said the dog.",
+      "caption": "Not I again",
+      "scene": { "background": "sunny", "props": ["🐷", "🐱", "🐶"], "motion": "shake" },
+      "sfx": "none"
+    },
+    {
+      "text": "\"Then I will do it myself,\" said the little red hen. Snip, snip, snip!",
+      "caption": "Snip, snip, snip",
+      "scene": { "background": "meadow", "props": ["🐔", "🌾", "✂️"], "motion": "bounce" },
+      "sfx": "pop"
+    },
+    {
+      "text": "\"Who will help me grind the wheat into flour?\" \"Not I! Not I! Not I!\"",
+      "caption": "Grinding the wheat",
+      "scene": { "background": "cottage", "props": ["🐔", "🌾", "🐷", "🐱"], "motion": "shake" },
+      "sfx": "none"
+    },
+    {
+      "text": "\"Then I will do it myself.\" Round and round went the little red hen. Whirr, whirr!",
+      "caption": "Round and round",
+      "scene": { "background": "cottage", "props": ["🐔", "🥣"], "motion": "sway" },
+      "sfx": "whoosh"
+    },
+    {
+      "text": "\"Who will help me bake the bread?\" \"Not I! Not I! Not I!\"",
+      "caption": "Who will bake?",
+      "scene": { "background": "cottage", "props": ["🐔", "🐷", "🐱", "🐶"], "motion": "shake" },
+      "sfx": "none"
+    },
+    {
+      "text": "\"Then I will do it myself.\" Pat, pat, pat. Into the oven it went. Mmm, what a smell!",
+      "caption": "Into the oven",
+      "scene": { "background": "cottage", "props": ["🐔", "🍞", "🔥"], "motion": "float" },
+      "sfx": "pop"
+    },
+    {
+      "text": "\"Who will help me EAT the bread?\" \"I will!\" said the pig. \"I will!\" said the cat. \"I will!\" said the dog.",
+      "caption": "We will eat it!",
+      "scene": { "background": "sunny", "props": ["🍞", "🐷", "🐱", "🐶"], "motion": "bounce" },
+      "sfx": "boing"
+    },
+    {
+      "text": "\"Oh no,\" said the little red hen. \"You did not help. So I will eat it with my chicks.\"",
+      "caption": "Bread for the chicks",
+      "scene": { "background": "meadow", "props": ["🐔", "🐥", "🐥", "🍞"], "motion": "sway" },
+      "sfx": "none"
+    },
+    {
+      "text": "The next day, her friends came to help plant. And soon there was warm bread for everyone. The end.",
+      "caption": "Everyone helps now",
+      "scene": { "background": "sunny", "props": ["🐔", "🐷", "🐱", "🍞"], "motion": "bounce" },
+      "sfx": "sparkle"
+    }
+  ]
+}
