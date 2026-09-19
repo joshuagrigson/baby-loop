@@ -34,6 +34,8 @@
   <label>bpm <input id="bpm" type="number" value="112" min="40" max="180" step="0.5" /></label>
   <label>loop s <input id="loop" type="number" value="25.6" min="4" max="120" step="0.1" /></label>
   <label>palette <select id="palette"><option value="">scene default</option><option>primary</option><option>pastel</option><option>newborn</option></select></label>
+  <label>theme <select id="theme"><option value="">none</option><option>halloween</option><option>christmas</option><option>winter</option><option>valentines</option><option>easter</option><option>spring</option><option>summer</option><option>thanksgiving</option><option>birthday</option></select></label>
+  <label>count <input id="count" type="number" value="" min="1" max="9" step="1" placeholder="auto" style="width:64px" /></label>
   <button id="play" class="primary">Pause</button>
   <button id="png">Save PNG</button>
   <button id="reload">Reload modules</button>
@@ -60,12 +62,16 @@
   for (const s of Object.values(SCENES)) { const o = document.createElement('option'); o.value = s.id; o.textContent = `${s.name} (${s.ageBand})`; sel.appendChild(o); }
   const params = new URLSearchParams(location.search);
   if (params.get('scene')) sel.value = params.get('scene');
+  if (params.get('theme')) $('theme').value = params.get('theme');
+  if (params.get('seed')) $('seed').value = params.get('seed');
 
   let state, info, scene, playing = true, t = 0, last = performance.now();
   function rebuild() {
     scene = SCENES[sel.value];
     const seconds = Number($('loop').value), bpm = Number($('bpm').value), seed = Number($('seed').value);
     const options = {}; if ($('palette').value) options.palette = $('palette').value;
+    if ($('theme').value) options.theme = $('theme').value;
+    if ($('count').value) options.count = Number($('count').value);
     info = sceneInfo({ scene, width: canvas.width, height: canvas.height, fps: 60, seconds, seed, bpm, options });
     state = scene.init(info);
     if (state.total) { info.seconds = state.total; info.loopSeconds = state.total; }
@@ -83,7 +89,7 @@
     requestAnimationFrame(draw);
   }
   sel.onchange = () => { $('bpm').value = SCENES[sel.value].defaults.bpm; rebuild(); };
-  for (const id of ['seed', 'bpm', 'loop', 'palette']) $(id).onchange = rebuild;
+  for (const id of ['seed', 'bpm', 'loop', 'palette', 'theme', 'count']) $(id).onchange = rebuild;
   $('play').onclick = () => { playing = !playing; $('play').textContent = playing ? 'Pause' : 'Play'; };
   $('scrub').oninput = (e) => { playing = false; $('play').textContent = 'Play'; t = (e.target.value / 1000) * info.seconds; };
   $('png').onclick = () => { const a = document.createElement('a'); a.download = `${scene.id}-${t.toFixed(2)}s.png`; a.href = canvas.toDataURL('image/png'); a.click(); };
