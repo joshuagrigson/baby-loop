@@ -39,7 +39,7 @@ spec.json ──► compose.mjs
 ## Setup
 
 ```bash
-cd babyloop
+git clone https://github.com/joshuagrigson/baby-loop && cd baby-loop
 npm install                       # @napi-rs/canvas (prebuilt, no compiler needed)
 pip install piper-tts             # offline neural TTS for narration (optional for pure loop videos)
 pip install imageio-ffmpeg        # only if you don't have ffmpeg with libx264+aac on PATH

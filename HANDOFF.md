@@ -1,7 +1,7 @@
 # BabyLoop — Handoff
 
 **For:** whoever produces the actual background videos (a developer, an editor, or another Claude session).
-**Repo:** `joshuagrigson/paper-plate`, branch `claude/magical-gauss-mtxsrl`, folder `babyloop/`.
+**Repo:** `joshuagrigson/baby-loop`, branch `main` (files at the repo root). Also mirrored under `babyloop/` on paper-plate branch `claude/magical-gauss-mtxsrl`.
 **State:** background-video pipeline built and verified end to end at 1920×1080/30 fps with muxed AAC audio. Narration pipeline (stories, rhymes, lessons) built, content library complete (6 stories, 12 rhymes, 5 lesson sets), smoke test green.
 
 ---
@@ -15,8 +15,7 @@ Nothing is taken from Hey Bear or anyone else. Competitor research is metadata o
 ## 2. Produce the background video (the actual deliverable)
 
 ```bash
-git clone https://github.com/joshuagrigson/paper-plate && cd paper-plate
-git checkout claude/magical-gauss-mtxsrl && cd babyloop
+git clone https://github.com/joshuagrigson/baby-loop && cd baby-loop
 npm install                                   # @napi-rs/canvas, prebuilt
 pip install imageio-ffmpeg                    # skip if `ffmpeg -encoders` shows libx264 + aac
 node bin/babyloop.mjs doctor                  # ffmpeg ✔ display font ✔ emoji font ✔ (piper only needed for narration)
@@ -119,14 +118,7 @@ Sizes: ~2,300 lines of JS across lib/ + scenes/; ~1,100 lines of Python in resea
 
 ## 7. HANDS NEEDED (pre-approved, paste don't review)
 
-1. **Own repo.** This lives on a paper-plate branch (same pattern as GhostCut before it moved). Create `joshuagrigson/babyloop` on github.com/new, then:
-   ```bash
-   git clone https://github.com/joshuagrigson/paper-plate && cd paper-plate
-   git checkout claude/magical-gauss-mtxsrl
-   git subtree split --prefix=babyloop -b babyloop-main
-   git push https://github.com/joshuagrigson/babyloop babyloop-main:main
-   ```
-   Then set the default branch to `main` at github.com/joshuagrigson/babyloop/settings/branches (the standing default-branch item).
+1. **Own repo — DONE.** Lives at github.com/joshuagrigson/baby-loop, branch `main` (default). Optional: make it private under Settings → Danger Zone until the channel launches.
 2. **YouTube upload credentials.** console.cloud.google.com → new project → enable "YouTube Data API v3" → OAuth consent screen (External, add your Gmail as test user) → Credentials → OAuth client ID (Desktop app) → download JSON → save as `babyloop/upload/client_secret.json`. Then `pip install -r upload/requirements.txt` and `python upload/upload.py out/sensory-30min/sensory-30min.mp4 --meta out/sensory-30min/meta.json --thumbnail out/sensory-30min/thumbnail.png --privacy private`.
 3. **Channel name.** PLAYBOOK §7 lists eight candidates (Bloomloop, Hushpetal, Pip & Pear, Tinyorbit, Dozydot, Moonpebble, Littlelumen, Slowstar) — check handle + .com + USPTO the same day. Put the chosen name in each spec's `title`/`thumbnailText`.
 4. **Windows only:** install a colour emoji font is not needed (Segoe UI Emoji ships), but confirm `node bin/babyloop.mjs doctor` shows an emoji family; on Linux `apt install fonts-noto-color-emoji`.
