@@ -1,0 +1,20 @@
+{
+  "id": "holiday-halloween-30min",
+  "title": "Halloween Fruit Friends Dance Party | Baby Sensory | 30 Minutes",
+  "thumbnailText": "Halloween | Dance Party",
+  "hook": "A gentle Halloween party for little ones: fruit friends in witch hats dancing to soft music, floating pumpkins and friendly ghosts, and a calm starry wind-down. Nothing scary, nothing loud.",
+  "seed": 1031,
+  "theme": "halloween",
+  "tags": ["halloween for babies", "halloween baby sensory", "toddler halloween"],
+  "segments": [
+    { "type": "title", "seconds": 4 },
+    { "type": "loop", "scene": "dancing-fruits", "label": "Pumpkin Party — London Bridge", "minutes": 4, "bpm": 108, "melody": "london", "music": "dance", "seed": 1 },
+    { "type": "loop", "scene": "bubbles", "label": "Spooky Bubbles", "minutes": 3, "bpm": 96, "melody": "generated", "music": "learn", "seed": 2 },
+    { "type": "loop", "scene": "dancing-fruits", "label": "Witch Hat Wiggle — Old MacDonald", "minutes": 4, "bpm": 112, "melody": "oldmac", "music": "dance", "seed": 3, "options": { "count": 8 } },
+    { "type": "loop", "scene": "high-contrast", "label": "High Contrast (newborn)", "minutes": 3, "bpm": 72, "melody": "furelise", "music": "lullaby", "seed": 4 },
+    { "type": "loop", "scene": "dancing-fruits", "label": "Candy Dance — Frère Jacques", "minutes": 4, "bpm": 112, "melody": "frere", "music": "dance", "seed": 5, "options": { "count": 7 } },
+    { "type": "loop", "scene": "bubbles", "label": "Bubbles II", "minutes": 3, "bpm": 96, "melody": "row", "music": "learn", "seed": 6 },
+    { "type": "loop", "scene": "dancing-fruits", "label": "Boo Bounce — Twinkle", "minutes": 4, "bpm": 112, "melody": "twinkle", "music": "dance", "seed": 7 },
+    { "type": "loop", "scene": "sleepy-stars", "label": "Sleepy Stars (wind-down)", "minutes": 5, "bpm": 66, "melody": "brahms", "music": "lullaby", "seed": 8 }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "classical-lullabies-60min",
+  "title": "Classical Lullabies for Babies | Brahms, Ode to Joy, Pachelbel, Für Elise | Music Box | 1 Hour",
+  "thumbnailText": "Classical | Lullabies",
+  "hook": "One hour of child-friendly classical pieces played on a soft music box: Brahms' Lullaby, Ode to Joy, Pachelbel's Canon, the Minuet in G and Für Elise, with dim drifting animation for winding down.",
+  "seed": 1770,
+  "tags": ["classical music for babies", "baby lullaby classical", "brahms lullaby baby", "pachelbel canon baby sleep"],
+  "segments": [
+    { "type": "loop", "scene": "sleepy-stars", "label": "Brahms' Lullaby", "minutes": 10, "bpm": 66, "melody": "brahms", "music": "lullaby", "seed": 1 },
+    { "type": "loop", "scene": "bubbles", "label": "Pachelbel's Canon", "minutes": 10, "bpm": 60, "melody": "canon", "music": "lullaby", "seed": 2, "palette": "pastel", "options": { "count": 18 } },
+    { "type": "loop", "scene": "sleepy-stars", "label": "Ode to Joy", "minutes": 10, "bpm": 72, "melody": "ode", "music": "lullaby", "seed": 3 },
+    { "type": "loop", "scene": "high-contrast", "label": "Minuet in G (newborn high contrast)", "minutes": 8, "bpm": 84, "melody": "minuet", "music": "lullaby", "seed": 4 },
+    { "type": "loop", "scene": "bubbles", "label": "Für Elise", "minutes": 10, "bpm": 66, "melody": "furelise", "music": "lullaby", "seed": 5, "palette": "pastel", "options": { "count": 16 } },
+    { "type": "loop", "scene": "sleepy-stars", "label": "Brahms' Lullaby (reprise)", "minutes": 12, "bpm": 63, "melody": "brahms", "music": "lullaby", "seed": 6 }
+  ]
+}

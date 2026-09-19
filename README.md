@@ -94,10 +94,19 @@ OpenAI TTS instead.
 ```
 
 `music`: `dance` (kick, shaker, bass, marimba + music box), `learn` (no kick),
-`lullaby` (pad, music box, slow harp, long reverb). `melody`: `twinkle`, `mary`,
-`row`, `frere`, `london`, `oldmac`, `itsy`, `brahms`, or `generated` (seeded
-pentatonic original). Loop length = melody length at that BPM; `minutes` is
-rounded up to whole loops.
+`lullaby` (pad, music box, slow harp, long reverb). `melody`: nursery `twinkle`,
+`mary`, `row`, `frere`, `london`, `oldmac`, `itsy`; child-friendly classical `brahms`,
+`ode`, `minuet`, `canon`, `furelise`; holiday `jingle`, `deckhalls`, `silentnight`,
+`wewish`; or `generated` (seeded pentatonic original). Loop length = melody length
+at that BPM; `minutes` is rounded up to whole loops.
+
+`theme` (top level or per segment): `halloween`, `christmas`, `winter`, `valentines`,
+`easter`, `spring`, `summer`, `thanksgiving`, `birthday`. A theme recolours the field,
+drops matching confetti (🎃 👻 · ❄️ 🎁 · ❤️ · 🥚 🐣 · 🎈 …), puts a hat on every
+character (witch, santa, bunny, party, hearts, flowers, leaves) and titles the
+intro card. `options.count` sets how many fruit friends dance (default 6–8, two
+rows); `options.hat` overrides the hat (`"mixed"` = a party mix). Every character
+always smiles: closed smile at rest, big open grin on the beat.
 
 ## Adding a scene
 

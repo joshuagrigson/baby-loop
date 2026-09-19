@@ -36,7 +36,9 @@ To change the video, edit the spec — no code:
 | scene order / cut rhythm | order of `segments` | Hey Bear changes scene every 4–5 min; we default 3–5 |
 | look | `seed`, `palette` (`primary`, `pastel`, `newborn`), `options.count` (fruits on screen) | different seed = different cast, colours, dot pattern |
 | tempo / mood | `bpm` + `music` (`dance`, `learn`, `lullaby`) | bpm is snapped to the frame grid automatically |
-| tune | `melody`: `twinkle` `mary` `row` `frere` `london` `oldmac` `itsy` `brahms` `generated` | `generated` = seeded original pentatonic tune |
+| tune | `melody`: nursery `twinkle` `mary` `row` `frere` `london` `oldmac` `itsy` · classical `brahms` `ode` `minuet` `canon` `furelise` · holiday `jingle` `deckhalls` `silentnight` `wewish` · `generated` | `generated` = seeded original pentatonic tune |
+| holiday | `theme`: `halloween` `christmas` `winter` `valentines` `easter` `spring` `summer` `thanksgiving` `birthday` | recolours, confetti, hats on every character, themed title card |
+| cast size | `options.count` (default 6–8, two rows), `options.hat` | all characters smile; grin opens on the beat |
 | quality | top-level `crf` (18 default, 20 smaller), `preset` | x264 settings |
 | quick check | `--preview` flag | 640×360 @ 15 fps, one loop per segment, ~1 min |
 
@@ -53,7 +55,7 @@ babyloop/
 │   ├── render.mjs            canvas frames → raw RGBA pipe → ffmpeg libx264 yuv420p. ~25 fps at 1080p.
 │   ├── music.mjs             pure-JS synth: parse notes/chords, voices (musicbox, marimba, pluck, pad, bass, kick,
 │   │                         shaker), mixer, delay, Schroeder reverb, master; renders a SEAMLESS loop; WAV I/O.
-│   ├── melodies.mjs          8 public-domain melodies as note strings + procedural pentatonic generator.
+│   ├── melodies.mjs          16 public-domain melodies (nursery · child classical · holiday) + pentatonic generator.
 │   ├── tts.mjs               Piper wrapper (voice auto-download, cache) + OpenAI TTS option. PD voices only.
 │   ├── thumbnail.mjs         1280×720 frame from the first scene + 2-line title + duration badge.
 │   ├── metadata.mjs          title / chaptered description / tags / madeForKids for upload.py.
@@ -67,7 +69,7 @@ babyloop/
 │   ├── canvas.mjs            node canvas factory + font registration (assets/fonts, Noto Color Emoji).
 │   ├── ffmpeg.mjs            finds ffmpeg (PATH → imageio-ffmpeg), run(), probeDuration().
 │   └── scenes/
-│       ├── dancing-fruits.mjs  "Fruit Friends Dance" — 3–5 fruit characters hopping on the beat (3–18 m)
+│       ├── dancing-fruits.mjs  "Fruit Friends Dance" — 6–8 smiling fruit characters in two rows, hats + confetti by theme (3–18 m)
 │       ├── high-contrast.mjs   6 slow black/white/red patterns with cross-fades (0–3 m)
 │       ├── bubbles.mjs         pastel bubbles, fish, light rays; integer rises per loop (3–24 m)
 │       ├── sleepy-stars.mjs    twinkle, dozing moon, Zs, shooting stars, sheep over a fence (0–36 m)
@@ -75,7 +77,8 @@ babyloop/
 │       ├── story.mjs           picture-book pages: backdrop + emoji tableau + caption, cross-fades
 │       └── index.mjs           registry
 ├── specs/                    sensory-30min · sleepy-60min · learn-colors-shapes · story-jack-and-the-beanstalk
-│                             · demo-3min · background-sample-3min
+│                             · demo-3min · background-sample-3min · classical-lullabies-60min
+│                             · holiday-halloween-30min · holiday-christmas-30min · holiday-birthday-20min
 ├── preview/                  index.html (live scene preview) + serve.mjs (static server)
 ├── content/                  stories/*.json (6), rhymes/mother-goose.json (12), lessons.json (5 sets), index.json
 ├── research/                 scrape_channel.py (yt-dlp, metadata only), analyze.py, heybear-notes.md,

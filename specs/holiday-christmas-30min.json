@@ -1,0 +1,19 @@
+{
+  "id": "holiday-christmas-30min",
+  "title": "Christmas Fruit Friends Dance Party | Jingle Bells & Silent Night | Baby Sensory | 30 Minutes",
+  "thumbnailText": "Christmas | Dance Party",
+  "hook": "Fruit friends in Santa hats dance to music-box Jingle Bells and Deck the Halls, snow drifts by, and Silent Night winds everything down. Public-domain carols, gentle volume.",
+  "seed": 1225,
+  "theme": "christmas",
+  "tags": ["christmas for babies", "christmas baby sensory", "jingle bells for babies", "toddler christmas"],
+  "segments": [
+    { "type": "title", "seconds": 4 },
+    { "type": "loop", "scene": "dancing-fruits", "label": "Jingle Bells", "minutes": 4, "bpm": 116, "melody": "jingle", "music": "dance", "seed": 1 },
+    { "type": "loop", "scene": "bubbles", "label": "Snow Bubbles — We Wish You a Merry Christmas", "minutes": 3, "bpm": 100, "melody": "wewish", "music": "learn", "seed": 2 },
+    { "type": "loop", "scene": "dancing-fruits", "label": "Deck the Halls", "minutes": 4, "bpm": 112, "melody": "deckhalls", "music": "dance", "seed": 3, "options": { "count": 8 } },
+    { "type": "loop", "scene": "high-contrast", "label": "High Contrast (newborn)", "minutes": 3, "bpm": 72, "melody": "silentnight", "music": "lullaby", "seed": 4 },
+    { "type": "loop", "scene": "dancing-fruits", "label": "Jingle Bells (reprise)", "minutes": 4, "bpm": 116, "melody": "jingle", "music": "dance", "seed": 5, "options": { "count": 7 } },
+    { "type": "loop", "scene": "bubbles", "label": "Snow Bubbles II", "minutes": 3, "bpm": 96, "melody": "generated", "music": "learn", "seed": 6 },
+    { "type": "loop", "scene": "sleepy-stars", "label": "Silent Night (wind-down)", "minutes": 5, "bpm": 60, "melody": "silentnight", "music": "lullaby", "seed": 7 }
+  ]
+}

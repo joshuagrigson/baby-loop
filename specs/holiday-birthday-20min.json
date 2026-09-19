@@ -1,0 +1,17 @@
+{
+  "id": "holiday-birthday-20min",
+  "title": "Birthday Dance Party for Babies | Fruit Friends in Party Hats | 20 Minutes",
+  "thumbnailText": "Birthday | Dance Party",
+  "hook": "Balloons, party hats and eight fruit friends dancing to music-box nursery tunes and Ode to Joy — a first-birthday background video that stays calm.",
+  "seed": 101,
+  "theme": "birthday",
+  "tags": ["first birthday video", "birthday baby sensory", "party for babies"],
+  "segments": [
+    { "type": "title", "seconds": 4 },
+    { "type": "loop", "scene": "dancing-fruits", "label": "Party Hats — Ode to Joy", "minutes": 4, "bpm": 112, "melody": "ode", "music": "dance", "seed": 1, "options": { "count": 8 } },
+    { "type": "loop", "scene": "bubbles", "label": "Balloon Bubbles", "minutes": 3, "bpm": 96, "melody": "mary", "music": "learn", "seed": 2 },
+    { "type": "loop", "scene": "dancing-fruits", "label": "Cake Dance — London Bridge", "minutes": 4, "bpm": 112, "melody": "london", "music": "dance", "seed": 3, "options": { "count": 7 } },
+    { "type": "loop", "scene": "dancing-fruits", "label": "Confetti — Twinkle", "minutes": 4, "bpm": 112, "melody": "twinkle", "music": "dance", "seed": 4, "options": { "count": 8, "hat": "mixed" } },
+    { "type": "loop", "scene": "sleepy-stars", "label": "Sleepy Stars (wind-down)", "minutes": 5, "bpm": 66, "melody": "canon", "music": "lullaby", "seed": 5 }
+  ]
+}
