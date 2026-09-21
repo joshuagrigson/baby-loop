@@ -32,28 +32,51 @@
   <label>palette <select id="palette"><option value="">scene default</option><option>primary</option><option>pastel</option><option>newborn</option></select></label>
   <label>theme <select id="theme"><option value="">none</option><option>halloween</option><option>christmas</option><option>winter</option><option>valentines</option><option>easter</option><option>spring</option><option>summer</option><option>thanksgiving</option><option>birthday</option></select></label>
   <label>count <input id="count" type="number" min="1" max="9" step="1" placeholder="auto" style="width:64px" /></label>
-  <button id="play" class="primary">Pause</button>
+  <label>melody <select id="melody"></select></label>
+  <label>music <select id="mode"><option>dance</option><option>learn</option><option>lullaby</option></select></label>
+  <button id="music" class="primary">♪ Play with music</button>
+  <button id="play">Pause</button>
   <button id="png">Save PNG</button>
   <a href="samples/" style="margin-left:auto;color:var(--muted)">rendered samples ▸</a>
 </header>
 <main>
   <canvas id="c" width="1280" height="720"></canvas>
   <div class="row"><input id="scrub" type="range" min="0" max="1000" value="0" /><span class="stat" id="stat">loading…</span></div>
-  <p class="hint">This runs the <b>same scene code the renderer uses</b>; only the clock differs, and the music is not played here. Pause on any frame, take a screenshot, and tell Claude the <b>scene, seed, theme and the t value</b> shown below the picture along with what to change. Every combination here can be rendered exactly with <code>node bin/babyloop.mjs render &lt;scene&gt; --seed N --bpm B --seconds L</code>.</p>
+  <p class="hint">This runs the <b>same scene code the renderer uses</b>; only the clock differs. <b>♪ Play with music</b> renders the selected melody in your browser (1–4 s) and locks the animation to it, exactly as the video will be. Pause on any frame, take a screenshot, and tell Claude the <b>scene, seed, theme and the t value</b> shown below the picture along with what to change. Every combination here can be rendered exactly with <code>node bin/babyloop.mjs render &lt;scene&gt; --seed N --bpm B --seconds L</code>.</p>
 </main>
 <script>/*__BUNDLE__*/</script>
 <script type="module">
-  const { SCENES, sceneInfo, frameInfo } = window.BabyLoop;
+  const { SCENES, sceneInfo, frameInfo, renderMusic, snapBpm, melodyIds } = window.BabyLoop;
   await document.fonts.load('700 40px Fredoka').catch(() => {});
   const $ = (id) => document.getElementById(id);
   const canvas = $('c'), ctx = canvas.getContext('2d');
   const sel = $('scene');
   for (const s of Object.values(SCENES)) { const o = document.createElement('option'); o.value = s.id; o.textContent = `${s.name} (${s.ageBand})`; sel.appendChild(o); }
+  for (const id of [...melodyIds(), 'generated']) { const o = document.createElement('option'); o.value = id; o.textContent = id; $('melody').appendChild(o); }
   const params = new URLSearchParams(location.search);
   if (params.get('scene') && SCENES[params.get('scene')]) sel.value = params.get('scene');
   if (params.get('theme')) $('theme').value = params.get('theme');
   if (params.get('seed')) $('seed').value = params.get('seed');
+  if (params.get('melody')) $('melody').value = params.get('melody');
   let state, info, scene, playing = true, t = 0, last = performance.now();
+  let audio = null; // { ctx, src, startedAt, seconds }
+  function stopMusic() { if (audio) { try { audio.src.stop(); } catch {} audio.ctx.close(); audio = null; } $('music').textContent = '♪ Play with music'; }
+  async function startMusic() {
+    stopMusic();
+    $('music').textContent = 'rendering…';
+    await new Promise((r) => setTimeout(r, 30));
+    const bpm = snapBpm(Number($('bpm').value), 30);
+    const m = renderMusic({ mode: $('mode').value, bpm, melody: $('melody').value, seed: Number($('seed').value), fps: 30 });
+    const ctx = new (window.AudioContext || window.webkitAudioContext)({ sampleRate: 44100 });
+    const buf = ctx.createBuffer(2, m.samples, 44100);
+    buf.copyToChannel(m.L, 0); buf.copyToChannel(m.R, 1);
+    const src = ctx.createBufferSource(); src.buffer = buf; src.loop = true; src.connect(ctx.destination);
+    $('loop').value = m.seconds.toFixed(3); $('bpm').value = bpm;
+    rebuild(); // loop length now matches the music exactly
+    src.start(); audio = { ctx, src, startedAt: ctx.currentTime, seconds: m.seconds };
+    playing = true; $('play').textContent = 'Pause'; $('music').textContent = '■ Stop music';
+  }
+  $('music').onclick = () => (audio ? stopMusic() : startMusic());
   function rebuild() {
     scene = SCENES[sel.value];
     const seconds = Number($('loop').value), bpm = Number($('bpm').value), seed = Number($('seed').value);
@@ -68,7 +91,8 @@
   }
   function draw() {
     const now = performance.now();
-    if (playing) t = (t + (now - last) / 1000) % info.seconds;
+    if (audio && playing) t = ((audio.ctx.currentTime - audio.startedAt) % audio.seconds) % info.seconds;
+    else if (playing) t = (t + (now - last) / 1000) % info.seconds;
     last = now;
     ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1;
     scene.draw(ctx, t, state, frameInfo(info, t, Math.floor(t * 60)));
@@ -77,10 +101,10 @@
     $('stat').textContent = `${scene.id} · seed ${$('seed').value}${$('theme').value ? ' · theme ' + $('theme').value : ''} · t ${t.toFixed(2)} s / ${info.seconds.toFixed(1)} · beat ${((t * info.bpm) / 60).toFixed(1)}`;
     requestAnimationFrame(draw);
   }
-  sel.onchange = () => { $('bpm').value = SCENES[sel.value].defaults.bpm; rebuild(); };
-  for (const id of ['seed', 'bpm', 'loop', 'palette', 'theme', 'count']) $(id).onchange = rebuild;
-  $('play').onclick = () => { playing = !playing; $('play').textContent = playing ? 'Pause' : 'Play'; };
-  $('scrub').oninput = (e) => { playing = false; $('play').textContent = 'Play'; t = (e.target.value / 1000) * info.seconds; };
+  sel.onchange = () => { stopMusic(); $('bpm').value = SCENES[sel.value].defaults.bpm; $('mode').value = SCENES[sel.value].defaults.music || 'dance'; rebuild(); };
+  for (const id of ['seed', 'bpm', 'loop', 'palette', 'theme', 'count', 'melody', 'mode']) $(id).onchange = () => { const had = !!audio; stopMusic(); rebuild(); if (had) startMusic(); };
+  $('play').onclick = () => { playing = !playing; $('play').textContent = playing ? 'Pause' : 'Play'; if (audio) (playing ? audio.ctx.resume() : audio.ctx.suspend()); };
+  $('scrub').oninput = (e) => { stopMusic(); playing = false; $('play').textContent = 'Play'; t = (e.target.value / 1000) * info.seconds; };
   $('png').onclick = () => { const a = document.createElement('a'); a.download = `${scene.id}-seed${$('seed').value}-${t.toFixed(2)}s.png`; a.href = canvas.toDataURL('image/png'); a.click(); };
   $('bpm').value = SCENES[sel.value].defaults.bpm;
   rebuild();
