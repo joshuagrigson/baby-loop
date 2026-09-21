@@ -54,7 +54,7 @@ babyloop/
 │   ├── render.mjs            canvas frames → raw RGBA pipe → ffmpeg libx264 yuv420p. ~25 fps at 1080p.
 │   ├── music.mjs             pure-JS synth: parse notes/chords, voices (musicbox, marimba, pluck, pad, bass, kick,
 │   │                         shaker), mixer, delay, Schroeder reverb, master; renders a SEAMLESS loop; WAV I/O.
-│   ├── melodies.mjs          16 public-domain melodies (nursery · child classical · holiday) + pentatonic generator.
+│   ├── melodies.mjs          36 public-domain melodies (7 nursery · 24 child classical · 4 holiday · generated) + pentatonic generator.
 │   ├── tts.mjs               Piper wrapper (voice auto-download, cache) + OpenAI TTS option. PD voices only.
 │   ├── thumbnail.mjs         1280×720 frame from the first scene + 2-line title + duration badge.
 │   ├── metadata.mjs          title / chaptered description / tags / madeForKids for upload.py.
@@ -72,12 +72,17 @@ babyloop/
 │       ├── high-contrast.mjs   6 slow black/white/red patterns with cross-fades (0–3 m)
 │       ├── bubbles.mjs         pastel bubbles, fish, light rays; integer rises per loop (3–24 m)
 │       ├── sleepy-stars.mjs    twinkle, dozing moon, Zs, shooting stars, sheep over a fence (0–36 m)
+│       ├── garden.mjs          smiling flowers bloom on the beat, bees + butterflies (3–36 m)
+│       ├── rainbow-rain.mjs    smiling clouds, beat-timed rain, breathing rainbow (3–24 m)
+│       ├── balloons.mjs        8–11 smiling balloons rising, confetti (3–24 m)
+│       ├── train.mjs           engine with a face pulls animal passengers past scrolling hills (6–36 m)
 │       ├── flashcards.mjs      LEARN cards (emoji / drawn shape / count grid) with narration cues
 │       ├── story.mjs           picture-book pages: backdrop + emoji tableau + caption, cross-fades
 │       └── index.mjs           registry
 ├── specs/                    sensory-30min · sleepy-60min · learn-colors-shapes · story-jack-and-the-beanstalk
 │                             · demo-3min · background-sample-3min · classical-lullabies-60min
 │                             · holiday-halloween-30min · holiday-christmas-30min · holiday-birthday-20min
+│                             · classical-favorites-60min (20 famous pieces, each paired with a scene)
 ├── preview/                  index.html (live scene preview) + serve.mjs (static server)
 ├── content/                  stories/*.json (6), rhymes/mother-goose.json (12), lessons.json (5 sets), index.json
 ├── research/                 scrape_channel.py (yt-dlp, metadata only), analyze.py, heybear-notes.md,

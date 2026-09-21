@@ -1,0 +1,31 @@
+{
+  "id": "classical-favorites-60min",
+  "title": "Classical Music for Babies | 20 Famous Pieces with Gentle Animation | Mozart, Bach, Vivaldi, Tchaikovsky | 1 Hour",
+  "thumbnailText": "Classical | for Babies",
+  "hook": "Twenty of the most famous classical themes, arranged for a soft music box and paired with calm, smiling animation: a flower garden for Vivaldi's Spring, rainbow rain for Bach's Prelude, a little train for Grieg's Mountain King, balloons for the Can-Can, and sleepy stars for Debussy.",
+  "seed": 1791,
+  "tags": ["classical music for babies", "mozart for babies", "baby einstein style", "classical baby sensory", "calm classical toddler"],
+  "segments": [
+    { "type": "title", "text": "Classical Friends", "caption": "20 famous pieces", "seconds": 4, "props": ["🎻", "🎹", "🎺"] },
+    { "type": "loop", "scene": "garden", "label": "Vivaldi — Spring", "minutes": 3, "bpm": 100, "melody": "spring", "music": "learn", "seed": 1 },
+    { "type": "loop", "scene": "dancing-fruits", "label": "Mozart — Eine kleine Nachtmusik", "minutes": 3, "bpm": 112, "melody": "nachtmusik", "music": "dance", "seed": 2, "options": { "count": 7 } },
+    { "type": "loop", "scene": "rainbow-rain", "label": "Bach — Prelude in C", "minutes": 3, "bpm": 84, "melody": "prelude", "music": "lullaby", "seed": 3 },
+    { "type": "loop", "scene": "train", "label": "Grieg — In the Hall of the Mountain King", "minutes": 3, "bpm": 108, "melody": "mountainking", "music": "dance", "seed": 4 },
+    { "type": "loop", "scene": "balloons", "label": "Offenbach — Can-Can", "minutes": 3, "bpm": 120, "melody": "cancan", "music": "dance", "seed": 5 },
+    { "type": "loop", "scene": "sleepy-stars", "label": "Debussy — Clair de lune", "minutes": 3, "bpm": 66, "melody": "clairdelune", "music": "lullaby", "seed": 6 },
+    { "type": "loop", "scene": "garden", "label": "Grieg — Morning Mood", "minutes": 3, "bpm": 90, "melody": "morning", "music": "learn", "seed": 7 },
+    { "type": "loop", "scene": "dancing-fruits", "label": "Mozart — Turkish March", "minutes": 3, "bpm": 112, "melody": "turkish", "music": "dance", "seed": 8, "options": { "count": 8 } },
+    { "type": "loop", "scene": "bubbles", "label": "Tchaikovsky — Swan Lake", "minutes": 3, "bpm": 72, "melody": "swanlake", "music": "lullaby", "seed": 9, "palette": "pastel" },
+    { "type": "loop", "scene": "train", "label": "Haydn — Surprise Symphony", "minutes": 3, "bpm": 108, "melody": "surprise", "music": "dance", "seed": 10 },
+    { "type": "loop", "scene": "balloons", "label": "Rossini — William Tell Overture", "minutes": 3, "bpm": 120, "melody": "williamtell", "music": "dance", "seed": 11 },
+    { "type": "loop", "scene": "rainbow-rain", "label": "Satie — Gymnopédie No. 1", "minutes": 3, "bpm": 72, "melody": "gymnopedie", "music": "lullaby", "seed": 12 },
+    { "type": "loop", "scene": "garden", "label": "Bach — Jesu, Joy of Man's Desiring", "minutes": 3, "bpm": 84, "melody": "jesu", "music": "learn", "seed": 13 },
+    { "type": "loop", "scene": "dancing-fruits", "label": "Strauss — The Blue Danube", "minutes": 3, "bpm": 100, "melody": "danube", "music": "learn", "seed": 14, "options": { "count": 6 } },
+    { "type": "loop", "scene": "bubbles", "label": "Rimsky-Korsakov — Flight of the Bumblebee", "minutes": 3, "bpm": 120, "melody": "bumblebee", "music": "learn", "seed": 15 },
+    { "type": "loop", "scene": "sleepy-stars", "label": "Beethoven — Moonlight Sonata", "minutes": 3, "bpm": 60, "melody": "moonlight", "music": "lullaby", "seed": 16 },
+    { "type": "loop", "scene": "train", "label": "Mozart — Sonata facile K. 545", "minutes": 3, "bpm": 100, "melody": "k545", "music": "learn", "seed": 17 },
+    { "type": "loop", "scene": "garden", "label": "Wagner — Bridal Chorus", "minutes": 3, "bpm": 84, "melody": "bridal", "music": "learn", "seed": 18 },
+    { "type": "loop", "scene": "rainbow-rain", "label": "Dvořák — Largo (New World)", "minutes": 3, "bpm": 66, "melody": "largo", "music": "lullaby", "seed": 19 },
+    { "type": "loop", "scene": "sleepy-stars", "label": "Greensleeves", "minutes": 3, "bpm": 66, "melody": "greensleeves", "music": "lullaby", "seed": 20 }
+  ]
+}

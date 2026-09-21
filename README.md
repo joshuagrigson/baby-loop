@@ -1,7 +1,8 @@
 # BabyLoop
 
-A faceless baby & toddler video factory. Beat-synced animated loops (dancing
-fruit with faces, newborn high-contrast patterns, bubbles, sleepy stars),
+A faceless baby & toddler video factory. Beat-synced animated loops (fruit friends
+with faces, newborn high-contrast patterns, bubbles, sleepy stars, a flower garden,
+rainbow rain, balloons, a little animal train),
 procedurally generated nursery music from public-domain melodies, offline
 narration of public-domain stories and Mother Goose rhymes, assembled into
 30/60-minute YouTube episodes with a thumbnail and upload metadata.
@@ -95,9 +96,12 @@ OpenAI TTS instead.
 
 `music`: `dance` (kick, shaker, bass, marimba + music box), `learn` (no kick),
 `lullaby` (pad, music box, slow harp, long reverb). `melody`: nursery `twinkle`,
-`mary`, `row`, `frere`, `london`, `oldmac`, `itsy`; child-friendly classical `brahms`,
-`ode`, `minuet`, `canon`, `furelise`; holiday `jingle`, `deckhalls`, `silentnight`,
-`wewish`; or `generated` (seeded pentatonic original). Loop length = melody length
+`mary`, `row`, `frere`, `london`, `oldmac`, `itsy`; child-friendly classical (24) `brahms`,
+`ode`, `minuet`, `canon`, `furelise`, `nachtmusik`, `turkish`, `jesu`, `prelude`, `bridal`,
+`spring`, `swanlake`, `danube`, `morning`, `mountainking`, `surprise`, `cancan`, `williamtell`,
+`largo`, `k545`, `clairdelune`, `gymnopedie`, `moonlight`, `bumblebee`, `greensleeves`;
+holiday `jingle`, `deckhalls`, `silentnight`, `wewish`; or `generated` (seeded pentatonic
+original). `node bin/babyloop.mjs melodies` lists them with sources. Loop length = melody length
 at that BPM; `minutes` is rounded up to whole loops.
 
 `theme` (top level or per segment): `halloween`, `christmas`, `winter`, `valentines`,
