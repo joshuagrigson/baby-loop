@@ -1,8 +1,123 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabyLoop samples</title>
-<style>body{margin:0;background:#111318;color:#e9ecf1;font:15px/1.5 system-ui,sans-serif;padding:24px 16px;max-width:1120px;margin-inline:auto}h1{font-size:22px}a{color:#ffd400}video{width:100%;border-radius:10px;background:#000;margin:8px 0 28px}p{color:#9aa3b2}</style></head><body>
-<h1>BabyLoop rendered samples</h1><p><a href="../">← live preview</a> · all 1080p30 with music, straight out of the pipeline.</p>
-<h2>Classical sample (new scenes)</h2><p>Vivaldi's Spring in the flower garden → Bach's Prelude in the rainbow rain → Grieg's Mountain King on the little train → the Can-Can with balloons.</p><video controls preload="metadata" src="classical-sample.mp4"></video>
-<h2>Background sample (3 min 23 s)</h2><p>Title → Fruit Friends (Twinkle) → Bubbles → newborn High Contrast → Fruit Friends (Frère Jacques) → Sleepy Stars.</p><video controls preload="metadata" src="background-sample.mp4"></video>
-<h2>Christmas sample (2 min 19 s)</h2><p>Themed title card → 8 friends in Santa hats, Jingle Bells → snow bubbles → Silent Night wind-down.</p><video controls preload="metadata" src="christmas-sample.mp4"></video>
-<h2>Demo with narration (3 min 40 s)</h2><p>Loops, a colors lesson (narrated), Humpty Dumpty (narrated), sleepy wind-down.</p><video controls preload="metadata" src="demo-3min.mp4"></video>
-</body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BabyLoop Samples</title>
+<meta name="description" content="Finished BabyLoop episodes rendered straight out of the pipeline — 1080p30 with music.">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="../studio.css">
+<style>
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 32px 16px 64px; }
+  .hero { display: grid; gap: 8px; margin-bottom: 24px; }
+  .hero h1 { font-size: 32px; line-height: 1.1; }
+  .hero p { color: var(--muted); font-size: 15px; max-width: 64ch; }
+  .hero .chips { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
+  .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .card { display: flex; flex-direction: column; overflow: hidden; }
+  .card .media { position: relative; background: #000; aspect-ratio: 16 / 9; }
+  .card video { position: absolute; inset: 0; width: 100%; height: 100%; display: block; background: #000; }
+  .card .dur { position: absolute; right: 10px; bottom: 10px; font-size: 12px; font-weight: 700; color: #fff; background: rgba(0,0,0,.65); padding: 3px 8px; border-radius: 999px; font-variant-numeric: tabular-nums; pointer-events: none; }
+  .card .body { padding: 14px 16px 16px; display: grid; gap: 8px; }
+  .card h2 { font-size: 19px; line-height: 1.2; }
+  .card .flow { display: flex; flex-wrap: wrap; gap: 4px 0; align-items: center; font-size: 13px; color: var(--ink-2); }
+  .card .flow span { white-space: nowrap; }
+  .card .flow .arrow { color: var(--muted); margin: 0 6px; }
+  .card .desc { font-size: 13px; color: var(--muted); }
+  .card .foot { display: flex; align-items: center; gap: 8px; margin-top: 4px; flex-wrap: wrap; }
+  .card .foot .meta { color: var(--muted); font-size: 12px; font-weight: 700; margin-left: auto; }
+  .note { margin-top: 28px; color: var(--muted); font-size: 13px; }
+  @media (max-width: 760px) {
+    .wrap { padding-top: 20px; }
+    .hero h1 { font-size: 26px; }
+    .grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<svg hidden aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11m0 0 4-4m-4 4-4-4M4 17v2a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-2"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol>
+</svg>
+<header class="topbar">
+  <a class="brand" href="../" aria-label="BabyLoop Studio home">
+    <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="#ffd400"/><path d="M9.5 18.5a6.5 6.5 0 0 0 13 0" fill="none" stroke="#1b1b1b" stroke-width="2.6" stroke-linecap="round"/><circle cx="11.5" cy="12.5" r="1.7" fill="#1b1b1b"/><circle cx="20.5" cy="12.5" r="1.7" fill="#1b1b1b"/></svg>
+    <span class="name">BabyLoop</span><span class="tag">Samples</span>
+  </a>
+  <span class="grow"></span>
+  <a class="btn ghost" href="../"><svg class="ico"><use href="#i-back"/></svg>Open the studio</a>
+  <button class="btn icon" id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode"><svg class="ico" id="theme-icon"><use href="#i-moon"/></svg></button>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Rendered samples</h1>
+    <p>Finished episodes straight out of the pipeline, exactly as they would upload: 1920×1080 at 30 fps, beat-locked loops, procedural music mixed in. Every scene you see here can be reproduced in the studio from its seed.</p>
+    <div class="chips"><span class="chip">1080p30</span><span class="chip">H.264 + AAC</span><span class="chip">Music generated in-house</span></div>
+  </section>
+
+  <section class="grid" aria-label="Sample videos">
+    <article class="panel card">
+      <div class="media"><video controls preload="metadata" playsinline src="classical-sample.mp4"></video><span class="dur">1:36</span></div>
+      <div class="body">
+        <h2>Classical sample</h2>
+        <div class="flow"><span>Flower Garden · Vivaldi's Spring</span><span class="arrow">→</span><span>Rainbow Rain · Bach's Prelude</span><span class="arrow">→</span><span>Little Train · Mountain King</span><span class="arrow">→</span><span>Balloon Party · Can-Can</span></div>
+        <p class="desc">The four newest scenes, each paired with a child-arranged classical piece from the melody catalogue.</p>
+        <div class="foot"><a class="btn" href="classical-sample.mp4" download><svg class="ico"><use href="#i-download"/></svg>Download MP4</a><span class="meta">18 MB</span></div>
+      </div>
+    </article>
+
+    <article class="panel card">
+      <div class="media"><video controls preload="metadata" playsinline src="background-sample.mp4"></video><span class="dur">3:23</span></div>
+      <div class="body">
+        <h2>Background sample</h2>
+        <div class="flow"><span>Title</span><span class="arrow">→</span><span>Fruit Friends · Twinkle</span><span class="arrow">→</span><span>Bubbles</span><span class="arrow">→</span><span>High Contrast</span><span class="arrow">→</span><span>Fruit Friends · Frère Jacques</span><span class="arrow">→</span><span>Sleepy Stars</span></div>
+        <p class="desc">A compressed version of the 30-minute sensory episode: slow scene changes, a newborn high-contrast interlude, and a lullaby wind-down.</p>
+        <div class="foot"><a class="btn" href="background-sample.mp4" download><svg class="ico"><use href="#i-download"/></svg>Download MP4</a><span class="meta">61 MB</span></div>
+      </div>
+    </article>
+
+    <article class="panel card">
+      <div class="media"><video controls preload="metadata" playsinline src="christmas-sample.mp4"></video><span class="dur">2:19</span></div>
+      <div class="body">
+        <h2>Christmas sample</h2>
+        <div class="flow"><span>Themed title card</span><span class="arrow">→</span><span>8 friends in Santa hats · Jingle Bells</span><span class="arrow">→</span><span>Snow bubbles</span><span class="arrow">→</span><span>Silent Night wind-down</span></div>
+        <p class="desc">The <code>christmas</code> theme applied episode-wide: holiday palette, confetti, hats on every character, and the holiday melody group.</p>
+        <div class="foot"><a class="btn" href="christmas-sample.mp4" download><svg class="ico"><use href="#i-download"/></svg>Download MP4</a><span class="meta">30 MB</span></div>
+      </div>
+    </article>
+
+    <article class="panel card">
+      <div class="media"><video controls preload="metadata" playsinline src="demo-3min.mp4"></video><span class="dur">2:58</span></div>
+      <div class="body">
+        <h2>Demo with narration</h2>
+        <div class="flow"><span>Loops</span><span class="arrow">→</span><span>Colours lesson · narrated</span><span class="arrow">→</span><span>Humpty Dumpty · narrated</span><span class="arrow">→</span><span>Sleepy wind-down</span></div>
+        <p class="desc">Shows the learn track: flashcards with offline text-to-speech narration, a narrated nursery rhyme, then a lullaby close.</p>
+        <div class="foot"><a class="btn" href="demo-3min.mp4" download><svg class="ico"><use href="#i-download"/></svg>Download MP4</a><span class="meta">49 MB</span></div>
+      </div>
+    </article>
+  </section>
+
+  <p class="note">Render your own with <code>node bin/babyloop.mjs episode specs/&lt;name&gt;.json</code> — or build a spec visually in the <a href="../">studio's playlist panel</a>.</p>
+</main>
+
+<script type="module">
+  const root = document.documentElement;
+  const store = { get(k) { try { return JSON.parse(localStorage.getItem(k)); } catch { return null; } }, set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} } };
+  const icon = document.getElementById('theme-icon').querySelector('use'), btn = document.getElementById('theme-toggle');
+  const isDark = () => root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  function apply(mode) { if (mode === 'light' || mode === 'dark') root.dataset.theme = mode; else delete root.dataset.theme; icon.setAttribute('href', isDark() ? '#i-sun' : '#i-moon'); btn.setAttribute('aria-label', isDark() ? 'Switch to light mode' : 'Switch to dark mode'); }
+  apply(store.get('babyloop.theme'));
+  btn.onclick = () => { const next = isDark() ? 'light' : 'dark'; store.set('babyloop.theme', next); apply(next); };
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => apply(store.get('babyloop.theme')));
+  // Pause the others when one sample starts playing.
+  const videos = [...document.querySelectorAll('video')];
+  for (const v of videos) v.addEventListener('play', () => { for (const o of videos) if (o !== v) o.pause(); });
+</script>
+</body>
+</html>
