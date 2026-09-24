@@ -13,7 +13,10 @@ fs.writeFileSync(entry, [
   `import { renderMusic, snapBpm } from '../lib/music.mjs';`,
   `import { melodyIds, classicalIds, MELODIES } from '../lib/melodies.mjs';`,
   `import { THEMES, PALETTES } from '../lib/palette.mjs';`,
-  `window.BabyLoop = { SCENES, sceneInfo, frameInfo, renderMusic, snapBpm, melodyIds, classicalIds, MELODIES, THEMES, PALETTES };`,
+  `import { CRITTERS, CRITTER_GROUPS, critter } from '../lib/critters/index.mjs';`,
+  `import { fruit, FRUITS } from '../lib/draw.mjs';`,
+  `import { blink } from '../lib/easing.mjs';`,
+  `window.BabyLoop = { SCENES, sceneInfo, frameInfo, renderMusic, snapBpm, melodyIds, classicalIds, MELODIES, THEMES, PALETTES, CRITTERS, CRITTER_GROUPS, critter, fruit, FRUITS, blink };`,
   ``,
 ].join('\n'));
 const r = await build({ entryPoints: [entry], bundle: true, format: 'iife', minify: true, write: false });
