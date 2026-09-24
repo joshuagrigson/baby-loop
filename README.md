@@ -34,6 +34,14 @@ spec.json ──► compose.mjs
 * **Music is seamless.** The arrangement is rendered twice back-to-back and the
   second pass is kept, so the reverb/delay tail of the loop end already sits
   under the loop start.
+* **Chapter changes are soft.** Between segments the composer renders a 0.8 s
+  white blink (last frame → white → first frame) while the outgoing music fades,
+  so a 30-minute episode never hard-cuts. `"transitions": "none"` in a spec turns it off.
+* **Broadcast loudness.** The final mux runs `loudnorm` to −16 LUFS / −1.5 dBTP,
+  then a 4 s tail fade; video is x264 `-tune animation -preset slow -crf 17`.
+* **Characters are lit.** Every body is shaded by a top-left studio light, eyes have
+  two glossy highlights, brows lift on the beat, fruit friends have arms that swing,
+  and every field has a lit centre, slow bokeh and a gentle vignette.
 * **One codebase, two runtimes.** Scenes are plain Canvas 2D modules with no
   Node imports; `preview/index.html` runs the same files live in a browser.
 

@@ -92,7 +92,7 @@ async function main() {
       const t0 = Date.now();
       console.log(`Composing "${spec.title}" → ${outDir}${args.preview ? '  (preview: 640x360@15, one loop each)' : ''}`);
       const r = await composeEpisode(spec, { outDir, preview: !!args.preview });
-      console.log(`\n✔ ${r.final}\n  ${Math.round(r.manifest.seconds / 60)} min ${Math.round(r.manifest.seconds % 60)} s · ${r.manifest.width}x${r.manifest.height}@${r.manifest.fps} · ${((Date.now() - t0) / 1000 / 60).toFixed(1)} min to build`);
+      console.log(`\n✔ ${r.final}\n  ${Math.floor(r.manifest.seconds / 60)} min ${Math.round(r.manifest.seconds % 60)} s · ${r.manifest.width}x${r.manifest.height}@${r.manifest.fps} · ${((Date.now() - t0) / 1000 / 60).toFixed(1)} min to build`);
       console.log(`  thumbnail ${r.thumb}\n  meta      ${path.join(outDir, 'meta.json')}  (title/description/tags for upload/upload.py)`);
       break;
     }
