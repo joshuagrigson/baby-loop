@@ -7,7 +7,15 @@ import { fileURLToPath } from 'node:url';
 import { build } from 'esbuild';
 const here = path.dirname(fileURLToPath(import.meta.url));
 const entry = path.join(here, 'entry.mjs');
-fs.writeFileSync(entry, `import { SCENES } from '../lib/scenes/index.mjs';\nimport { sceneInfo, frameInfo } from '../lib/info.mjs';\nimport { renderMusic, snapBpm } from '../lib/music.mjs';\nimport { melodyIds } from '../lib/melodies.mjs';\nwindow.BabyLoop = { SCENES, sceneInfo, frameInfo, renderMusic, snapBpm, melodyIds };\n`);
+fs.writeFileSync(entry, [
+  `import { SCENES } from '../lib/scenes/index.mjs';`,
+  `import { sceneInfo, frameInfo } from '../lib/info.mjs';`,
+  `import { renderMusic, snapBpm } from '../lib/music.mjs';`,
+  `import { melodyIds, classicalIds, MELODIES } from '../lib/melodies.mjs';`,
+  `import { THEMES, PALETTES } from '../lib/palette.mjs';`,
+  `window.BabyLoop = { SCENES, sceneInfo, frameInfo, renderMusic, snapBpm, melodyIds, classicalIds, MELODIES, THEMES, PALETTES };`,
+  ``,
+].join('\n'));
 const r = await build({ entryPoints: [entry], bundle: true, format: 'iife', minify: true, write: false });
 const js = r.outputFiles[0].text;
 const tpl = fs.readFileSync(path.join(here, 'template.html'), 'utf8');
