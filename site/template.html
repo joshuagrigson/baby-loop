@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23ffd400'/%3E%3Cpath d='M9.5 18.5a6.5 6.5 0 0 0 13 0' fill='none' stroke='%231b1b1b' stroke-width='2.6' stroke-linecap='round'/%3E%3Ccircle cx='11.5' cy='12.5' r='1.7' fill='%231b1b1b'/%3E%3Ccircle cx='20.5' cy='12.5' r='1.7' fill='%231b1b1b'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="studio.css">
 <style>
   /* ---- Layout ---- */
@@ -40,9 +41,9 @@
   .thumb-canvas { position: relative; border-radius: 7px; overflow: hidden; background: #000; aspect-ratio: 16 / 9; }
   .thumb-canvas canvas { display: block; width: 100%; height: 100%; }
   .thumb-canvas .kind { position: absolute; right: 6px; bottom: 6px; font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #fff; background: rgba(0,0,0,.55); padding: 2px 6px; border-radius: 999px; }
-  .thumb-meta { display: flex; justify-content: space-between; align-items: baseline; gap: 6px; padding: 0 2px; }
-  .thumb-name { font-weight: 700; font-size: 13px; }
-  .thumb-age { color: var(--muted); font-size: 11.5px; white-space: nowrap; }
+  .thumb-meta { display: grid; gap: 1px; padding: 0 2px; }
+  .thumb-name { font-weight: 700; font-size: 13px; line-height: 1.25; }
+  .thumb-age { color: var(--muted); font-size: 11.5px; }
 
   /* ---- Stage ---- */
   .stage-wrap { flex: none; display: grid; gap: 10px; }
@@ -79,7 +80,7 @@
   .insp-scene .chips { display: flex; gap: 6px; flex-wrap: wrap; }
   .section { padding: 12px 14px; display: grid; gap: 10px; border-bottom: 1px solid var(--line); }
   .section:last-child { border-bottom: 0; }
-  .section h4 { margin: 0; font: 700 11.5px/1 var(--font-body); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  .section h4 { margin: 0; font: 600 14px/1 var(--font-display); color: var(--ink); }
   .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
   .melody-card { display: grid; gap: 3px; padding: 10px 12px; border-radius: var(--radius-sm); background: var(--panel-2); border: 1px solid var(--line); }
   .melody-card .name { font-weight: 700; font-size: 13.5px; }
@@ -222,7 +223,7 @@
         </div>
         <div class="scrub">
           <input id="scrub" type="range" min="0" max="10000" value="0" aria-label="Scrub position">
-          <div class="readout"><span class="beat-dot" id="beat-dot" aria-hidden="true"></span><span><b id="t-now">0.00</b> / <span id="t-len">0.00</span> s</span><span>beat <b id="beat-now">0.0</b></span><span class="frame">frame <b id="frame-now">0</b></span></div>
+          <div class="readout"><span><b id="t-now">0.00</b> / <span id="t-len">0.00</span> s</span><span>beat <b id="beat-now">0.0</b></span><span class="beat-dot" id="beat-dot" aria-hidden="true"></span><span class="frame">frame <b id="frame-now">0</b></span></div>
         </div>
         <div class="group">
           <button class="btn keep" id="music" type="button" data-state="idle" aria-pressed="false" title="Music on / off (M)"><svg class="ico" id="music-icon"><use href="#i-music"/></svg><span class="lbl" id="music-label">Music</span></button>
@@ -246,7 +247,7 @@
           <div class="field"><label for="pl-theme">Episode theme</label><select id="pl-theme"><option value="">None</option></select></div>
           <div class="field span3"><label for="pl-titletext">Title card text</label><input id="pl-titletext" type="text" placeholder="Fruit Friends" autocomplete="off"></div>
           <div class="field"><label for="pl-titlesec">Title card s</label><input id="pl-titlesec" type="number" min="2" max="12" step="1" value="4"></div>
-          <div class="field span2"><span class="label">Output</span><div class="pl-actions"><button class="btn primary keep" id="pl-add" type="button"><svg class="ico"><use href="#i-plus"/></svg><span class="lbl">Add current view</span></button><button class="btn sm ghost" id="pl-example" type="button">Load example</button></div></div>
+          <div class="field span2"><span class="label">Segments</span><div class="pl-actions"><button class="btn primary keep" id="pl-add" type="button"><svg class="ico"><use href="#i-plus"/></svg><span class="lbl">Add current view</span></button><button class="btn sm ghost" id="pl-example" type="button">Load example</button></div></div>
         </div>
         <div>
           <div class="timeline" id="timeline" aria-hidden="true"></div>
@@ -437,13 +438,13 @@ function rebuild(keepPhase = true) {
   if (S.count) options.count = Number(S.count);
   if (S.hat) options.hat = S.hat;
   const seconds = music ? music.seconds : Number(S.loop) || 25.6;
-  info = sceneInfo({ scene, width: canvas.width, height: canvas.height, fps: FPS, seconds, seed: Number(S.seed) || 0, bpm: Number(S.bpm), options });
+  info = sceneInfo({ scene, width: canvas.width, height: canvas.height, fps: FPS, seconds, seed: Number(S.seed) || 0, bpm: snapBpm(Number(S.bpm), FPS), options });
   state = scene.init(info);
   if (state && state.total) { info.seconds = state.total; info.loopSeconds = state.total; }
   t = keepPhase ? t % info.seconds : 0;
   needsDraw = true;
   $('t-len').textContent = info.seconds.toFixed(2);
-  $('loop-hint').textContent = state && state.total ? `fixed by scene (${state.total.toFixed(1)} s)` : music ? `from music · ${music.bars} bars` : 'manual · music sets this';
+  $('loop-hint').textContent = state && state.total ? 'fixed by the scene' : music ? `from music · ${music.bars} bars` : 'manual until music plays';
   $('loop').value = Number(info.seconds.toFixed(3));
   $('loop').disabled = !!music || !!(state && state.total);
   updateInspector();
@@ -650,8 +651,8 @@ $('scene-count').textContent = `${sceneList.length}`;
 function tickThumbs(now) {
   if (document.hidden) return;
   for (const th of thumbs) {
-    if (!th.info || !th.visible) continue;
-    if (reduceMotion && th.drawn) continue;
+    if (!th.info) continue;
+    if (th.drawn && (!th.visible || reduceMotion)) continue;
     if (now - th.last < 1000 / 12) continue;
     th.last = now;
     const tt = (now / 1000 + th.offset) % th.info.seconds;
@@ -812,7 +813,13 @@ function validateSpec(spec) {
   if (!spec.segments.some((s) => s.type === 'loop')) problems.push('add at least one scene segment');
   return problems;
 }
+let plRendering = false, plRenderAgain = false;
 function renderPL() {
+  if (plRendering) { plRenderAgain = true; return; }
+  plRendering = true;
+  try { renderPLNow(); } finally { plRendering = false; if (plRenderAgain) { plRenderAgain = false; renderPL(); } }
+}
+function renderPLNow() {
   $('pl-title').value = PL.title; $('pl-thumb').value = PL.thumb; $('pl-seed').value = PL.seed; $('pl-theme').value = PL.theme; $('pl-titletext').value = PL.titleText; $('pl-titlesec').value = PL.titleSec;
   const total = totalMinutes();
   $('runtime').textContent = fmtMin(total);

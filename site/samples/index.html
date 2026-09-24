@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23ffd400'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../studio.css">
 <style>
   .wrap { max-width: 1120px; margin: 0 auto; padding: 32px 16px 64px; }
@@ -20,7 +21,7 @@
   .card { display: flex; flex-direction: column; overflow: hidden; }
   .card .media { position: relative; background: #000; aspect-ratio: 16 / 9; }
   .card video { position: absolute; inset: 0; width: 100%; height: 100%; display: block; background: #000; }
-  .card .dur { position: absolute; right: 10px; bottom: 10px; font-size: 12px; font-weight: 700; color: #fff; background: rgba(0,0,0,.65); padding: 3px 8px; border-radius: 999px; font-variant-numeric: tabular-nums; pointer-events: none; }
+  .card .dur { position: absolute; right: 10px; top: 10px; font-size: 12px; font-weight: 700; color: #fff; background: rgba(0,0,0,.65); padding: 3px 8px; border-radius: 999px; font-variant-numeric: tabular-nums; pointer-events: none; }
   .card .body { padding: 14px 16px 16px; display: grid; gap: 8px; }
   .card h2 { font-size: 19px; line-height: 1.2; }
   .card .flow { display: flex; flex-wrap: wrap; gap: 4px 0; align-items: center; font-size: 13px; color: var(--ink-2); }
@@ -63,27 +64,27 @@
 
   <section class="grid" aria-label="Sample videos">
     <article class="panel card">
-      <div class="media"><video controls preload="metadata" playsinline src="classical-sample.mp4"></video><span class="dur">1:36</span></div>
+      <div class="media"><video controls preload="metadata" playsinline poster="classical-sample.png" src="classical-sample.mp4"></video><span class="dur">1:39</span></div>
       <div class="body">
         <h2>Classical sample</h2>
         <div class="flow"><span>Flower Garden · Vivaldi's Spring</span><span class="arrow">→</span><span>Rainbow Rain · Bach's Prelude</span><span class="arrow">→</span><span>Little Train · Mountain King</span><span class="arrow">→</span><span>Balloon Party · Can-Can</span></div>
         <p class="desc">The four newest scenes, each paired with a child-arranged classical piece from the melody catalogue.</p>
-        <div class="foot"><a class="btn" href="classical-sample.mp4" download><svg class="ico"><use href="#i-download"/></svg>Download MP4</a><span class="meta">18 MB</span></div>
+        <div class="foot"><a class="btn" href="classical-sample.mp4" download><svg class="ico"><use href="#i-download"/></svg>Download MP4</a><span class="meta">21 MB</span></div>
       </div>
     </article>
 
     <article class="panel card">
-      <div class="media"><video controls preload="metadata" playsinline src="background-sample.mp4"></video><span class="dur">3:23</span></div>
+      <div class="media"><video controls preload="metadata" playsinline poster="background-sample.png" src="background-sample.mp4"></video><span class="dur">3:27</span></div>
       <div class="body">
         <h2>Background sample</h2>
         <div class="flow"><span>Title</span><span class="arrow">→</span><span>Fruit Friends · Twinkle</span><span class="arrow">→</span><span>Bubbles</span><span class="arrow">→</span><span>High Contrast</span><span class="arrow">→</span><span>Fruit Friends · Frère Jacques</span><span class="arrow">→</span><span>Sleepy Stars</span></div>
         <p class="desc">A compressed version of the 30-minute sensory episode: slow scene changes, a newborn high-contrast interlude, and a lullaby wind-down.</p>
-        <div class="foot"><a class="btn" href="background-sample.mp4" download><svg class="ico"><use href="#i-download"/></svg>Download MP4</a><span class="meta">61 MB</span></div>
+        <div class="foot"><a class="btn" href="background-sample.mp4" download><svg class="ico"><use href="#i-download"/></svg>Download MP4</a><span class="meta">94 MB</span></div>
       </div>
     </article>
 
     <article class="panel card">
-      <div class="media"><video controls preload="metadata" playsinline src="christmas-sample.mp4"></video><span class="dur">2:19</span></div>
+      <div class="media"><video controls preload="metadata" playsinline poster="christmas-sample.png" src="christmas-sample.mp4"></video><span class="dur">2:19</span></div>
       <div class="body">
         <h2>Christmas sample</h2>
         <div class="flow"><span>Themed title card</span><span class="arrow">→</span><span>8 friends in Santa hats · Jingle Bells</span><span class="arrow">→</span><span>Snow bubbles</span><span class="arrow">→</span><span>Silent Night wind-down</span></div>
@@ -93,7 +94,7 @@
     </article>
 
     <article class="panel card">
-      <div class="media"><video controls preload="metadata" playsinline src="demo-3min.mp4"></video><span class="dur">2:58</span></div>
+      <div class="media"><video controls preload="metadata" playsinline poster="demo-3min.png" src="demo-3min.mp4"></video><span class="dur">2:58</span></div>
       <div class="body">
         <h2>Demo with narration</h2>
         <div class="flow"><span>Loops</span><span class="arrow">→</span><span>Colours lesson · narrated</span><span class="arrow">→</span><span>Humpty Dumpty · narrated</span><span class="arrow">→</span><span>Sleepy wind-down</span></div>
