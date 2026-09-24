@@ -11,3 +11,4 @@ research/data/*.csv
 site/index.html
 site/samples/*.mp4
 .netlify/
+lib/scenes/_prof_*.mjs
