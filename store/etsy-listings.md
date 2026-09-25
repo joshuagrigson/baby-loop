@@ -81,8 +81,8 @@ on the cake, in the title card and in the song.
 
 WHAT YOU GET
 • One 1080p MP4 video (H.264 + AAC), 4–5 minutes, plays on any phone, tablet, laptop or TV
-• "Happy Birthday to You" arranged as a music-box tune, with your child's name spoken at the
-  right moment and their age sung in
+• "Happy Birthday to You" arranged as a music-box tune, with your child's name spoken warmly at the
+  right moments (and their age, if you tell us)
 • A Balloon Party scene and a Fruit Friends dance, everyone in party hats, confetti falling
   on the beat
 • A closing title card ("Happy 2nd Birthday, Mila!") you can pause on for photos
