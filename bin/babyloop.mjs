@@ -34,7 +34,7 @@ const HELP = `babyloop — faceless baby/toddler video factory
   babyloop render <scene> [--seconds 20] [--seed 1] [--bpm 112] [--w 1920 --h 1080 --fps 30] [--out f.mp4]
   babyloop music [--mode dance|learn|lullaby] [--melody twinkle|…|generated] [--bpm 112] [--seed 1] [--out f.wav]
   babyloop say "text" [--voice amy|lessac|hfc_female|jenny] [--out f.wav]
-  babyloop episode <spec.json> [--out-dir out/<id>] [--preview]
+  babyloop episode <spec.json> [--out-dir out/<id>] [--preview] [--name Mia]   ({name} tokens → Mia)
   babyloop thumbnail <spec.json> [--out thumb.png]
   babyloop content                             list stories / rhymes / lessons
   babyloop doctor                              check ffmpeg, piper, voices, fonts
@@ -87,6 +87,8 @@ async function main() {
       const specPath = pos[0];
       if (!specPath) throw new Error('episode: spec path required');
       const spec = loadJson(specPath);
+      if (args.name) spec.name = String(args.name);
+      if (args.title) spec.title = String(args.title);
       const outDir = str('out-dir', `out/${spec.id || path.basename(specPath, '.json')}`);
       fs.mkdirSync(outDir, { recursive: true });
       const t0 = Date.now();
