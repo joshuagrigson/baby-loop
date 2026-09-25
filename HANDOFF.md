@@ -50,8 +50,8 @@ An automated made-for-kids YouTube channel earns ~$0 for months under 2026 enfor
 
 | Rank | Product | Price | Command | Status |
 |---|---|---|---|---|
-| 1 | Personalised videos (Birthday 4–5 min, Goodnight 20 min, Bedtime Story) on Etsy (made-to-order digital) + Payhip mirror | $15 / $19 / $15 | `node bin/babyloop.mjs order birthday --name Mila --age 2 [--say Meela]` → `out/orders/<id>/` + zip; `order link <id> <url>` writes the small download note you attach on Etsy | built, sample: `out/orders/birthday-ava` |
-| 2 | Calm Library one-time download (~10 h video + audio) on Payhip, upsold in every delivery message | $24 launch / $39 | `node bin/babyloop.mjs library --audio` → `out/library/` + delivery page | command built; render in progress |
+| 1 | Personalised videos (Birthday 4–5 min, Goodnight 20 min, Bedtime Story) on Etsy (made-to-order digital) + Payhip mirror | $4.99 / $6.99 / $4.99 | `node bin/babyloop.mjs order birthday --name Mila --age 2 [--say Meela]` → `out/orders/<id>/` + zip; `order link <id> <url>` writes the small download note you attach on Etsy | built, sample: `out/orders/birthday-ava` |
+| 2 | Calm Library one-time download (~10 h video + audio) on Payhip, upsold in every delivery message | $19 launch / $29 | `node bin/babyloop.mjs library --audio` → `out/library/` + delivery page | command built; render in progress |
 | 3 | Generator licence (Creator $249 / Studio $999), `LICENSE-COMMERCIAL.md` | — | zip the repo minus research/out/node_modules | text done |
 | 4 | Lullaby albums on Bandcamp (DistroKid later) | $6 NYP | `node bin/babyloop.mjs album specs/albums/music-box-lullabies-vol1.json` → WAV/FLAC/MP3 + cover + paste text | vol1 rendered |
 | demo | 9:16 clips for TikTok/Reels/Shorts (parent-facing), six flagship YouTube episodes with end cards | free | `node bin/babyloop.mjs clip specs/clips`, `episode specs/flagship/*.json` | 3 clips rendered, 6 specs validated |

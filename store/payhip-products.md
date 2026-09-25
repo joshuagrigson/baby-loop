@@ -36,7 +36,7 @@ for the videos and **on** for the album mirror if you list it here too.
 ## Product 1 — Happy Birthday video (personalised)
 
 - **Name:** Happy Birthday video with your child's name (personalised, 4–5 min, 1080p)
-- **Price:** US$15
+- **Price:** US$4.99
 - **Type:** Digital product, delivered manually within 24 h
 - **Checkout fields:** name · how to say it · age turning · (optional) favourite character or song wish
 - **Cover image:** `site/shop/birthday-poster.png` (or the lead's `site/samples/birthday-sample.png`)
@@ -47,7 +47,7 @@ for the videos and **on** for the album mirror if you list it here too.
 ## Product 2 — Goodnight video (personalised)
 
 - **Name:** Goodnight video with your child's name (personalised, 20 min lullaby video, 1080p + MP3)
-- **Price:** US$19
+- **Price:** US$6.99
 - **Checkout fields:** name · how to say it · (optional) sleepy friend / lullaby wish
 - **Cover image:** `site/shop/goodnight-poster.png`
 - **Short description:** Twenty slow minutes of Sleepy Stars and drifting bubbles, opened by a soft goodnight to your child by name. Brahms, Twinkle and an original music-box tune; fades out on its own. 1080p MP4 plus MP3, within 24 hours.
@@ -56,7 +56,7 @@ for the videos and **on** for the album mirror if you list it here too.
 ## Product 3 — Bedtime story (personalised)
 
 - **Name:** Personalised bedtime story video, your child as the hero (6 tales, 6–8 min, 1080p)
-- **Price:** US$15
+- **Price:** US$4.99
 - **Checkout fields:** name · how to say it · tale (Beanstalk / Goldilocks / Gingerbread Man / Little Red Hen / Tortoise & Hare / Three Little Pigs) · (optional) favourite animal
 - **Cover image:** `site/shop/story-poster.png`
 - **Short description:** A classic tale retold for toddlers with your child in the lead role. Sixteen illustrated pages, one calm sentence per page, captions to read along, a lullaby under the ending. 1080p MP4 within 24 hours.
@@ -65,7 +65,7 @@ for the videos and **on** for the album mirror if you list it here too.
 ## Product 4 — The Calm Library (download pass)
 
 - **Name:** The Calm Library — every BabyLoop episode and album, ad-free, yours to keep
-- **Price:** US$24 launch price (list US$39; use Payhip's *compare-at* price so the strike-through shows). Not personalised.
+- **Price:** US$19 launch price (list US$29; use Payhip's *compare-at* price so the strike-through shows). Not personalised.
 - **Type:** Digital product, automatic delivery. If the bundle exceeds Payhip's per-file limit, deliver a `README.txt` with the download links plus a small "start here" MP4, and host the big files on a file host with direct links.
 - **Cover image:** a 2×2 grid of `site/samples/*.png` posters
 - **Checkout fields:** none

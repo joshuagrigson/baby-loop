@@ -47,7 +47,7 @@ when they discover it afterwards, not before.
 Personalized Happy Birthday Video for Toddler | Name & Age in the Song, Hand-Drawn Fruit Friends & Balloons, 1080p Digital Download
 ```
 
-**Price:** US$15.00
+**Price:** US$4.99
 
 **Tags (13, each ≤ 20 chars)**
 
@@ -135,7 +135,7 @@ developmental claims: it's a lovely video with a nice song in it.
 Personalized Goodnight Video for Baby & Toddler | 20 Minute Lullaby Video With Your Child's Name, Calm Hand-Drawn, 1080p Download
 ```
 
-**Price:** US$19.00
+**Price:** US$6.99
 
 **Tags**
 
@@ -225,7 +225,7 @@ chosen with that in mind. No developmental claims, just a calm wind-down.
 Personalized Bedtime Story Video With Your Child as the Hero | Jack and the Beanstalk & 5 More Tales, Narrated, Hand-Drawn, 1080p
 ```
 
-**Price:** US$15.00
+**Price:** US$4.99
 
 **Tags**
 
@@ -315,7 +315,7 @@ child's name in it, which is the whole point.
 
 ## Optional 4th listing — "The whole set"
 
-Once the three sell, add a US$39 listing bundling all three (saves US$10). Same settings; the
+Once the three sell, add a US$29 listing bundling all three (saves US$10). Same settings; the
 personalization prompt asks for name, age, pronunciation and tale in one box. Etsy shows
 bundles well in "you may also like", and it lifts average order value without a new product.
 
