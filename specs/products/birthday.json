@@ -3,10 +3,10 @@
   "price": 4.99,
   "currency": "USD",
   "minutes": 5,
-  "blurb": "4–5 min personalised birthday party: fruit friends in party hats dance to Happy Birthday, the narrator says your child's name, calm sleepy-stars outro.",
+  "blurb": "4–5 min personalised birthday party: the narrator SINGS Happy Birthday with your child's name, fruit friends in party hats dance, bubbles, confetti, calm sleepy-stars outro.",
   "title": "Happy {ordinal} Birthday, {name}! | A Birthday Video Made Just for {name}",
   "thumbnailText": "Happy {ordinal} Birthday | {name}!",
-  "hook": "A birthday party made just for {name}: fruit friends in party hats dance to Happy Birthday, bubbles float by, confetti falls, and a friendly voice says {name}'s name.",
+  "hook": "A birthday party made just for {name}: Happy Birthday sung to {name} by name, fruit friends in party hats, bubbles and confetti.",
   "seed": 5101,
   "theme": "birthday",
   "voice": "kristin",
@@ -28,6 +28,18 @@
       "say": [
         "Happy birthday, {name}!"
       ]
+    },
+    {
+      "type": "song",
+      "song": "happy-birthday",
+      "label": "Happy Birthday, sung to {name}",
+      "scene": "dancing-fruits",
+      "bpm": 96,
+      "music": "learn",
+      "seed": 5105,
+      "options": {
+        "count": 6
+      }
     },
     {
       "type": "loop",

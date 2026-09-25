@@ -32,7 +32,7 @@ export async function run(args = {}, pos = []) {
     const products = listProducts();
     if (!products.length) { console.log('No products in specs/products/'); return; }
     for (const p of products) {
-      const price = p.price != null ? `$${Number(p.price).toFixed(0)} ${p.currency}` : '—';
+      const price = p.price != null ? (Number(p.price) === 0 ? "free" : `$${Number(p.price).toFixed(2)} ${p.currency}`) : "—";
       console.log(`${p.product.padEnd(10)} ${String(p.minutes + ' min').padEnd(8)} ${price.padEnd(9)} ${p.title}`);
       if (p.blurb) console.log(`${''.padEnd(10)} ${p.blurb}`);
     }

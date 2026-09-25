@@ -1,0 +1,28 @@
+{
+  "product": "teaser",
+  "price": 0,
+  "currency": "USD",
+  "minutes": 0.5,
+  "blurb": "Free 30-second teaser: the music box plays Happy Birthday, then it is sung with your child's name.",
+  "title": "Happy Birthday, {name}! (free teaser)",
+  "thumbnailText": "Happy Birthday | {name}!",
+  "hook": "Thirty seconds of Happy Birthday, sung to {name}.",
+  "seed": 5601,
+  "theme": "birthday",
+  "voice": "kristin",
+  "crf": 24,
+  "segments": [
+    {
+      "type": "song",
+      "song": "happy-birthday",
+      "label": "Happy Birthday, sung to {name}",
+      "scene": "dancing-fruits",
+      "bpm": 96,
+      "music": "learn",
+      "seed": 5605,
+      "options": {
+        "count": 6
+      }
+    }
+  ]
+}
