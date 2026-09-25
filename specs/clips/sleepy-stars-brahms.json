@@ -1,0 +1,11 @@
+{
+  "id": "sleepy-stars-brahms",
+  "title": "Shh. The moon is nodding off",
+  "scene": "sleepy-stars", "melody": "brahms", "music": "lullaby", "bpm": 66, "seed": 1007,
+  "seconds": 60,
+  "hook": "Shh. The moon is nodding off.",
+  "caption": "Shh…\nthe moon is nodding off",
+  "captionSeconds": 10,
+  "voice": "kristin",
+  "hashtags": ["lullaby", "babysleep", "brahmslullaby"]
+}

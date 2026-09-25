@@ -1,0 +1,11 @@
+{
+  "id": "bubbles-follow-fish",
+  "title": "Can your eyes follow the little fish?",
+  "scene": "bubbles", "melody": "row", "music": "learn", "bpm": 96, "seed": 1005,
+  "palette": "pastel",
+  "seconds": 50,
+  "hook": "Can your eyes follow the little fish?",
+  "caption": "Can your eyes follow\nthe little fish?",
+  "voice": "kristin",
+  "hashtags": ["visualtracking", "babysensory", "underthesea"]
+}

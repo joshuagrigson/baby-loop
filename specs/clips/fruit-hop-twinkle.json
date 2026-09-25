@@ -1,0 +1,11 @@
+{
+  "id": "fruit-hop-twinkle",
+  "title": "Which fruit friend hops first?",
+  "scene": "dancing-fruits", "melody": "twinkle", "music": "dance", "bpm": 112, "seed": 1001,
+  "palette": "primary", "options": { "count": 6 },
+  "seconds": 45,
+  "hook": "Which fruit friend hops first?",
+  "caption": "Which fruit friend\nhops first?",
+  "voice": "kristin",
+  "hashtags": ["babysensory", "fruitfriends", "twinkletwinkle"]
+}

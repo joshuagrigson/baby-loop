@@ -38,6 +38,12 @@ const HELP = `babyloop — faceless baby/toddler video factory
   babyloop thumbnail <spec.json> [--out thumb.png]
   babyloop content                             list stories / rhymes / lessons
   babyloop doctor                              check ffmpeg, piper, voices, fonts
+
+  Products (sell direct to parents):
+  babyloop order <birthday|goodnight|story> --name Mila [--age 2] [--say Meela]   made-to-order video → out/orders/
+  babyloop library [--audio] [--out-dir out/library]                              the 10-hour Calm Library bundle
+  babyloop album specs/albums/<id>.json                                           lullaby album (WAV/FLAC/MP3 + cover)
+  babyloop clip specs/clips/<id>.json                                             9:16 demo clip for TikTok/Shorts/Reels
 `;
 
 async function main() {
@@ -127,9 +133,14 @@ async function main() {
       break;
     }
     case 'probe': { console.log(probeStreams(pos[0]).join('\n')); break; }
-    default:
+    default: {
+      // Product commands live in bin/commands/<name>.mjs and export run(args, pos).
+      const here = path.dirname(new URL(import.meta.url).pathname);
+      const mod = cmd && /^[a-z][a-z0-9-]*$/.test(cmd) ? path.join(here, 'commands', `${cmd}.mjs`) : null;
+      if (mod && fs.existsSync(mod)) { await (await import(mod)).run(args, pos); break; }
       console.log(HELP);
       if (cmd && cmd !== 'help') process.exitCode = 1;
+    }
   }
 }
 

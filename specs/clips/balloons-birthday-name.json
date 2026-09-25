@@ -1,0 +1,13 @@
+{
+  "id": "balloons-birthday-name",
+  "title": "A birthday balloon party with your little one's name",
+  "scene": "balloons", "melody": "birthday", "music": "dance", "bpm": 116, "seed": 1003,
+  "theme": "birthday",
+  "seconds": 45,
+  "hook": "Whose birthday is it today, {name}?",
+  "caption": "Whose birthday\nis it today, {name}?",
+  "name": "Mia",
+  "voice": "kristin",
+  "post": { "caption": "Their name, in the video. A birthday balloon party made just for them." },
+  "hashtags": ["firstbirthday", "personalisedgift", "birthdayvideo"]
+}

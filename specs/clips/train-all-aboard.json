@@ -1,0 +1,10 @@
+{
+  "id": "train-all-aboard",
+  "title": "All aboard the animal train",
+  "scene": "train", "melody": "london", "music": "dance", "bpm": 108, "seed": 1010,
+  "seconds": 45,
+  "hook": "All aboard! Who is riding the animal train?",
+  "caption": "All aboard!\nWho's on the train?",
+  "voice": "kristin",
+  "hashtags": ["animaltrain", "toddlerfun", "chooChoo"]
+}

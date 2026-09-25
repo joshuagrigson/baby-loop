@@ -1,0 +1,27 @@
+{
+  "product": "birthday",
+  "price": 14,
+  "currency": "USD",
+  "minutes": 5,
+  "blurb": "4–5 min personalised birthday party: fruit friends in party hats dance to Happy Birthday, the narrator says your child's name, calm sleepy-stars outro.",
+  "title": "Happy {ordinal} Birthday, {name}! | A Birthday Video Made Just for {name}",
+  "thumbnailText": "Happy {ordinal} Birthday | {name}!",
+  "hook": "A birthday party made just for {name}: fruit friends in party hats dance to Happy Birthday, bubbles float by, confetti falls, and a friendly voice says {name}'s name.",
+  "seed": 5101,
+  "theme": "birthday",
+  "voice": "kristin",
+  "speechRate": 1.1,
+  "tags": ["personalized birthday video", "happy birthday song with name", "birthday video for toddlers"],
+  "segments": [
+    { "type": "title", "seconds": 5, "text": "Happy {ordinal} Birthday, {name}!", "caption": "A party just for {name}", "melody": "birthday", "music": "learn", "bpm": 100,
+      "say": ["Happy birthday, {name}!"] },
+    { "type": "loop", "scene": "dancing-fruits", "label": "Party Hats — Happy Birthday to You", "minutes": 1.5, "bpm": 108, "melody": "birthday", "music": "dance", "seed": 5111, "options": { "count": 8 },
+      "say": ["This one's for you, {name}!", "Happy {ordinal} birthday, {name}!"] },
+    { "type": "loop", "scene": "bubbles", "label": "Birthday Bubbles", "minutes": 1, "bpm": 96, "melody": "birthday", "music": "learn", "seed": 5112, "options": { "count": 16 },
+      "say": ["Look at all the bubbles, {name}!"] },
+    { "type": "loop", "scene": "dancing-fruits", "label": "Confetti Dance — Ode to Joy", "minutes": 1.1, "bpm": 112, "melody": "ode", "music": "dance", "seed": 5113, "options": { "count": 8, "hat": "mixed" },
+      "say": ["Everybody dance for {name}!", "Hooray for {name}!"] },
+    { "type": "loop", "scene": "sleepy-stars", "label": "Sleepy Stars (calm outro)", "minutes": 0.7, "bpm": 66, "melody": "twinkle", "music": "lullaby", "seed": 5114,
+      "say": [{ "text": "Happy birthday, {name}. We love you!", "at": -8 }] }
+  ]
+}

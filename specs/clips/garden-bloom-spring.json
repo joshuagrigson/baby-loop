@@ -1,0 +1,10 @@
+{
+  "id": "garden-bloom-spring",
+  "title": "Watch the flowers open on the beat",
+  "scene": "garden", "melody": "spring", "music": "learn", "bpm": 96, "seed": 1008,
+  "seconds": 45,
+  "hook": "Watch the flowers open on the beat.",
+  "caption": "Watch the flowers\nopen on the beat",
+  "voice": "kristin",
+  "hashtags": ["vivaldi", "babysensory", "springbaby"]
+}

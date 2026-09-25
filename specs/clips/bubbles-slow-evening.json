@@ -1,0 +1,12 @@
+{
+  "id": "bubbles-slow-evening",
+  "title": "Slow bubbles for a slow evening",
+  "scene": "bubbles", "melody": "clairdelune", "music": "lullaby", "bpm": 60, "seed": 1006,
+  "palette": "pastel", "options": { "count": 16 },
+  "seconds": 60,
+  "hook": "Slow bubbles for a slow evening.",
+  "caption": "Slow bubbles\nfor a slow evening",
+  "captionSeconds": 10,
+  "voice": "kristin",
+  "hashtags": ["bedtimeroutine", "babysleep", "clairdelune"]
+}

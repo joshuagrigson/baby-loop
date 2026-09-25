@@ -1,0 +1,12 @@
+{
+  "id": "newborn-contrast",
+  "title": "Black, white and red for newborn eyes",
+  "scene": "high-contrast", "melody": "twinkle", "music": "lullaby", "bpm": 72, "seed": 1004,
+  "options": { "patterns": [3, 5, 1] },
+  "seconds": 36,
+  "hook": "Newborn eyes love black, white and red.",
+  "caption": "Newborn eyes love\nblack, white & red",
+  "captionSeconds": 8,
+  "voice": "kristin",
+  "hashtags": ["newbornbaby", "highcontrast", "fourthtrimester"]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "fruit-count-five",
+  "title": "Count five fruit friends with Old MacDonald",
+  "scene": "dancing-fruits", "melody": "oldmac", "music": "dance", "bpm": 108, "seed": 1002,
+  "palette": "primary", "options": { "count": 5 },
+  "seconds": 40,
+  "hook": "Can you count five fruit friends?",
+  "caption": "Can you count\nfive fruit friends?",
+  "voice": "kristin",
+  "hashtags": ["counting", "babysensory", "toddlerlearning"]
+}

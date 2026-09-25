@@ -1,0 +1,18 @@
+{
+  "product": "story",
+  "price": 12,
+  "currency": "USD",
+  "minutes": 6,
+  "blurb": "A personalised bedtime story (Goldilocks and the Three Bears) dedicated to your child by name at the start and the end, over a soft Brahms music box.",
+  "title": "A Bedtime Story for {name} | Goldilocks and the Three Bears",
+  "thumbnailText": "A Story for | {name}",
+  "hook": "Goldilocks and the Three Bears, told slowly and gently for {name} — with a dedication to {name} at the start and a goodnight at the end.",
+  "seed": 5301,
+  "voice": "kristin",
+  "speechRate": 1.15,
+  "tags": ["personalized bedtime story", "story with my child's name", "goldilocks for toddlers"],
+  "segments": [
+    { "type": "story", "story": "goldilocks-and-the-three-bears", "caption": "A story for {name}", "endCaption": "Goodnight, {name}", "bpm": 66, "melody": "brahms", "music": "lullaby",
+      "say": ["This story is for {name}."], "sayEnd": ["Goodnight, {name}."] }
+  ]
+}

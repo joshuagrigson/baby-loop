@@ -1,0 +1,25 @@
+{
+  "product": "goodnight",
+  "price": 12,
+  "currency": "USD",
+  "minutes": 20,
+  "blurb": "20 min personalised sleep video: sleepy stars and slow bubbles at 60–66 bpm; a soft voice says goodnight to your child by name at each scene.",
+  "title": "Goodnight, {name} | A 20 Minute Personalised Lullaby Video",
+  "thumbnailText": "Goodnight, | {name}",
+  "hook": "Twenty slow, dim minutes made just for {name}: drifting stars, a dozing moon, slow bubbles and music-box lullabies, with a soft voice saying goodnight to {name} by name.",
+  "seed": 5201,
+  "voice": "kristin",
+  "speechRate": 1.2,
+  "tags": ["personalized lullaby", "goodnight video with name", "baby sleep video"],
+  "segments": [
+    { "type": "title", "seconds": 5, "text": "Goodnight, {name}", "caption": "Sleep tight", "melody": "brahms", "music": "lullaby", "bpm": 66,
+      "scene": { "background": "night", "props": ["🌙", "⭐", "🐑"], "motion": "sway" },
+      "say": ["Goodnight, {name}."] },
+    { "type": "loop", "scene": "sleepy-stars", "label": "Brahms' Lullaby", "minutes": 6.5, "bpm": 66, "melody": "brahms", "music": "lullaby", "seed": 5211,
+      "say": [{ "text": "Goodnight, {name}. Sleep tight.", "at": 2 }] },
+    { "type": "loop", "scene": "bubbles", "label": "Slow bubbles — Twinkle Twinkle", "minutes": 6, "bpm": 60, "melody": "twinkle", "music": "lullaby", "seed": 5212, "palette": "pastel", "options": { "count": 16 },
+      "say": [{ "text": "Goodnight, {name}. Sleep tight.", "at": 2 }] },
+    { "type": "loop", "scene": "sleepy-stars", "label": "Pachelbel's Canon (music box)", "minutes": 6.5, "bpm": 66, "melody": "canon", "music": "lullaby", "seed": 5213,
+      "say": [{ "text": "Goodnight, {name}. Sleep tight.", "at": 2 }, { "text": "Sweet dreams, {name}.", "at": -10 }] }
+  ]
+}
