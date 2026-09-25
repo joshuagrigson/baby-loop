@@ -43,6 +43,25 @@ To change the video, edit the spec — no code:
 
 Live iteration: `npm run preview` → http://localhost:8787/preview/ shows any scene animating in the browser with seed/bpm/palette controls. It runs the identical scene code the renderer uses.
 
+
+## 2b. Where the money is (decided 2026-09-25, verified by a research tournament)
+
+An automated made-for-kids YouTube channel earns ~$0 for months under 2026 enforcement and risks termination. So the asset sells **directly to parents**; YouTube and vertical clips are only the free demo reel.
+
+| Rank | Product | Price | Command | Status |
+|---|---|---|---|---|
+| 1 | Personalised videos (Birthday 4–5 min, Goodnight 20 min, Bedtime Story) on Etsy (made-to-order digital) + Payhip mirror | $15 / $19 / $15 | `node bin/babyloop.mjs order birthday --name Mila --age 2 [--say Meela]` → `out/orders/<id>/` + zip; `order link <id> <url>` writes the small download note you attach on Etsy | built, sample: `out/orders/birthday-ava` |
+| 2 | Calm Library one-time download (~10 h video + audio) on Payhip, upsold in every delivery message | $24 launch / $39 | `node bin/babyloop.mjs library --audio` → `out/library/` + delivery page | command built; render in progress |
+| 3 | Generator licence (Creator $249 / Studio $999), `LICENSE-COMMERCIAL.md` | — | zip the repo minus research/out/node_modules | text done |
+| 4 | Lullaby albums on Bandcamp (DistroKid later) | $6 NYP | `node bin/babyloop.mjs album specs/albums/music-box-lullabies-vol1.json` → WAV/FLAC/MP3 + cover + paste text | vol1 rendered |
+| demo | 9:16 clips for TikTok/Reels/Shorts (parent-facing), six flagship YouTube episodes with end cards | free | `node bin/babyloop.mjs clip specs/clips`, `episode specs/flagship/*.json` | 3 clips rendered, 6 specs validated |
+
+Shop page: https://baby-loop.netlify.app/shop (buy buttons read `LINKS` at the top of `site/shop/index.html`; empty → "Notify me" email capture via Netlify Forms). Listing copy: `store/etsy-listings.md`, `store/payhip-products.md`, `store/bandcamp.md`, `store/delivery-message.md`, `store/pricing.md`.
+
+Delivery: Etsy does not accept MP4 as a digital file and the videos are 100–300 MB, so deliver a link. Cheapest reliable path: upload the order zip to Cloudflare R2 (public bucket, 60-day lifecycle) or Google Drive, then `order link` and attach the .txt in Etsy's Complete Order dialog. Never put a child's name in a public URL.
+
+Kill switch: if the three Etsy listings total under 100 views in 21 days or under 1% conversion after 500 views, stop spending hours; leave the buttons up and treat the repo as a portfolio piece / licence product.
+
 ## 3. Breakdown — what each file does
 
 ```
