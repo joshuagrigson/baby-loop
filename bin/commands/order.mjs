@@ -1,15 +1,33 @@
 // babyloop order <birthday|goodnight|story> --name Mila [--age 2] [--say Meela] [--preview] [--out-dir out/orders]
 // babyloop order list
+// babyloop order link <orderId> <url>
 import path from 'node:path';
 import { renderOrder, listProducts } from '../../lib/order.mjs';
 
 export const HELP = `  babyloop order list                                     products, durations and prices
+  babyloop order link <orderId> <url>                     write Download-<Name>.txt (the small file you attach on Etsy)
   babyloop order <product> --name Mila [--age 2] [--say Meela] [--preview] [--out-dir out/orders]
                                                           render a personalised video into out/orders/<product>-<name>/`;
 
 export async function run(args = {}, pos = []) {
   const what = pos[0];
   if (!what || what === 'help') { console.log(HELP); return; }
+  if (what === 'link') {
+    // babyloop order link <orderId> <download-url>  → writes Download-<Name>.txt for the Etsy "complete order" attachment
+    const [, id, url] = pos;
+    if (!id || !url) throw new Error('usage: babyloop order link <orderId> <url>');
+    const fs = await import('node:fs'); const path = await import('node:path');
+    const dir = path.join(args['out-dir'] ? String(args['out-dir']) : 'out/orders', id);
+    const o = JSON.parse(fs.readFileSync(path.join(dir, 'order.json'), 'utf8'));
+    const txt = [`Your BabyLoop video for ${o.name}`, '', `Download (link stays live for 30 days, save it somewhere safe):`, url, '',
+      `File: ${o.product} video · ${o.duration || ''} · ${o.mb || ''} MB · 1080p MP4 (plays on any phone, tablet, laptop or TV)`, '',
+      'Yours to keep for your family (personal use). If a name is said wrong, reply with how to say it and we re-render for free.', '',
+      'Hand-drawn characters · music-box arrangements of public-domain melodies · the narrator is a synthetic voice.', 'baby-loop.netlify.app/shop'].join('\n');
+    const out = path.join(dir, `Download-${o.name}.txt`);
+    fs.writeFileSync(out, txt);
+    console.log(out);
+    return;
+  }
   if (what === 'list') {
     const products = listProducts();
     if (!products.length) { console.log('No products in specs/products/'); return; }
