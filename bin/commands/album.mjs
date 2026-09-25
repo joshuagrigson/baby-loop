@@ -23,7 +23,7 @@ export async function run(args = {}, pos = []) {
   if (!sub || sub === 'help') { console.log(HELP); return; }
 
   if (sub === 'credits') {
-    for (const id of melodyIds()) { const c = credit(id); console.log(`${id.padEnd(13)} ${c.line.padEnd(34)} ${c.work}${c.year ? ` (${c.year})` : ''}`); }
+    for (const id of melodyIds()) { const c = credit(id); console.log(`${id.padEnd(13)} ${c.line.padEnd(34)} ${c.work}`); }
     return;
   }
 
