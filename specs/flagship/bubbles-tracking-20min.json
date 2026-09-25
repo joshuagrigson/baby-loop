@@ -1,0 +1,19 @@
+{
+  "id": "flagship-bubbles-tracking-20min",
+  "title": "Bubbles! – Slow Visual Tracking for 3–6 Months – Calm Baby Sensory Video (20 Minutes)",
+  "thumbnailText": "Bubbles | Slow Visual Tracking",
+  "hook": "20 minutes under the sea for 3–6 months: rising bubbles and slow-swimming sea friends to follow with the eyes, five chapters that change tempo and how many bubbles are on screen, from a busy reef at 96 BPM down to a dozen slow bubbles at 60 BPM. Original music-box arrangements of Row Your Boat, Pachelbel's Canon, Dvořák's Largo and Twinkle. Watch together; point at the fish.",
+  "tags": ["bubbles baby sensory", "visual tracking baby", "3-6 months baby video", "calm baby video", "baby sensory", "underwater baby video", "fish for babies", "infant visual development", "slow baby video", "pachelbel canon baby", "babyloop"],
+  "seed": 630,
+  "thumbnailHeroes": ["critter:fish", "critter:whale", "critter:turtle"],
+  "diff": "The only flagship in the bubbles scene family and the only one built around a single visual-tracking idea: every chapter is the same reef, but the bubble count (22 → 14 → 30 → 12 → 18), palette (pastel / primary) and tempo (96 → 84 → 90 → 60 → 66 BPM) change so the eye has something new to follow every four minutes. Its melody set (Row Your Boat, Pachelbel's Canon, an original tune, Dvořák's Largo, Twinkle in lullaby mode) and its arc from busy to sparse are unique; no other flagship uses bubbles, sea characters or a density arc.",
+  "segments": [
+    { "type": "title", "text": "Bubbles", "caption": "slow visual tracking · 3–6 months", "seconds": 4, "props": ["critter:fish", "critter:turtle", "critter:octopus"], "scene": { "background": "ocean", "props": ["🐟", "🐢", "🐙"], "motion": "float" }, "music": "learn", "melody": "row", "bpm": 96 },
+    { "type": "loop", "scene": "bubbles", "label": "Busy reef — Row Your Boat", "minutes": 4, "bpm": 96, "melody": "row", "music": "learn", "seed": 631, "palette": "pastel", "options": { "count": 22 } },
+    { "type": "loop", "scene": "bubbles", "label": "Fewer bubbles — Pachelbel's Canon", "minutes": 4, "bpm": 84, "melody": "canon", "music": "learn", "seed": 632, "palette": "primary", "options": { "count": 14 } },
+    { "type": "loop", "scene": "bubbles", "label": "Bubble storm — original tune", "minutes": 4, "bpm": 90, "melody": "generated", "music": "learn", "seed": 633, "palette": "pastel", "options": { "count": 30 } },
+    { "type": "loop", "scene": "bubbles", "label": "Slow dozen — Largo", "minutes": 4, "bpm": 60, "melody": "largo", "music": "lullaby", "seed": 634, "palette": "pastel", "options": { "count": 12 } },
+    { "type": "loop", "scene": "bubbles", "label": "Drifting off — Twinkle (music box)", "minutes": 4, "bpm": 66, "melody": "twinkle", "music": "lullaby", "seed": 635, "palette": "pastel", "options": { "count": 18 } },
+    { "type": "title", "text": "More at baby-loop.netlify.app/shop", "caption": "Made just for your little one", "seconds": 8, "scene": { "background": "ocean", "props": ["🐟", "🐢", "🐙"], "motion": "float" }, "music": "lullaby", "melody": "twinkle", "bpm": 66 }
+  ]
+}

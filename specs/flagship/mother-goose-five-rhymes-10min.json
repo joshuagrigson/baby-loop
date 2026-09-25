@@ -1,0 +1,25 @@
+{
+  "id": "flagship-mother-goose-five-rhymes-10min",
+  "title": "Mother Goose – 5 Classic Nursery Rhymes – Humpty Dumpty, Hickory Dickory Dock, Jack and Jill & More",
+  "thumbnailText": "5 Nursery Rhymes | Mother Goose",
+  "hook": "Five Mother Goose rhymes read slowly with the words on screen for 12–36 months: Humpty Dumpty, Hickory Dickory Dock, Jack and Jill, Little Miss Muffet and Little Bo-Peep, with short garden, train and rainbow interludes between them (Vivaldi's Spring, London Bridge, Frère Jacques, Grieg's Morning Mood). Say the rhymes together; the pauses are there for your child's voice.",
+  "tags": ["nursery rhymes", "mother goose", "humpty dumpty", "hickory dickory dock", "jack and jill", "little miss muffet", "little bo peep", "toddler rhymes", "read aloud for toddlers", "sing along for toddlers", "babyloop"],
+  "seed": 640,
+  "voice": "kristin",
+  "speechRate": 1.15,
+  "thumbnailHeroes": ["critter:sheep", "critter:cow", "critter:duck"],
+  "diff": "The only verse flagship: five spoken Mother Goose rhymes (none of them the sung ones used elsewhere — no Twinkle, Mary or Old MacDonald here) shown as picture-book pages with the words on screen, separated by 90-second garden, train and rainbow-rain loops that no other flagship uses. Its narration is rhythmic verse rather than lesson cards or story prose, its melody set (Vivaldi's Spring, London Bridge, Frère Jacques, Grieg's Morning Mood, plus generated beds under the rhymes) is distinct, and it is the only episode that mixes four scene families.",
+  "segments": [
+    { "type": "title", "text": "Mother Goose", "caption": "five nursery rhymes", "seconds": 4, "props": ["🐑", "🐄", "🦆"], "music": "learn", "melody": "generated", "bpm": 96 },
+    { "type": "rhyme", "rhyme": "humpty-dumpty", "bpm": 96, "music": "learn", "pause": 1.6 },
+    { "type": "loop", "scene": "garden", "label": "Garden interlude — Spring (Vivaldi)", "minutes": 1.5, "bpm": 96, "melody": "spring", "music": "learn", "seed": 641 },
+    { "type": "rhyme", "rhyme": "hickory-dickory-dock", "bpm": 100, "music": "learn", "pause": 1.6 },
+    { "type": "loop", "scene": "train", "label": "Train interlude — London Bridge", "minutes": 1.5, "bpm": 104, "melody": "london", "music": "dance", "seed": 642 },
+    { "type": "rhyme", "rhyme": "jack-and-jill", "bpm": 96, "music": "learn", "pause": 1.6 },
+    { "type": "loop", "scene": "rainbow-rain", "label": "Rainbow interlude — Frère Jacques", "minutes": 1.5, "bpm": 84, "melody": "frere", "music": "learn", "seed": 643 },
+    { "type": "rhyme", "rhyme": "little-miss-muffet", "bpm": 92, "music": "learn", "pause": 1.6 },
+    { "type": "loop", "scene": "garden", "label": "Garden interlude — Morning Mood (Grieg)", "minutes": 1.5, "bpm": 88, "melody": "morning", "music": "learn", "seed": 644 },
+    { "type": "rhyme", "rhyme": "little-bo-peep", "bpm": 90, "music": "learn", "pause": 1.6 },
+    { "type": "title", "text": "More at baby-loop.netlify.app/shop", "caption": "Made just for your little one", "seconds": 8, "props": ["🐑", "🐄", "🦆"], "music": "learn", "melody": "generated", "bpm": 96 }
+  ]
+}

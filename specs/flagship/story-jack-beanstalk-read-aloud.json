@@ -1,0 +1,17 @@
+{
+  "id": "flagship-story-jack-beanstalk",
+  "title": "Jack and the Beanstalk – Bedtime Story for Toddlers – Read Aloud with Pictures",
+  "thumbnailText": "Jack and the | Beanstalk",
+  "hook": "A slow, gentle retelling of Jack and the Beanstalk for 18 months to 4 years, read aloud with picture-book pages (17 pages, about 7 seconds each, with a pause after every page), then a calm flower-garden wind-down. A soft music-box Greensleeves plays under the story. Read it together; ask what Jack should do next.",
+  "tags": ["jack and the beanstalk", "bedtime story for toddlers", "read aloud story", "fairy tale for kids", "picture book read aloud", "toddler story time", "calm bedtime video", "classic stories for children", "story for 2 year olds", "babyloop"],
+  "seed": 650,
+  "voice": "kristin",
+  "speechRate": 1.18,
+  "thumbnailHeroes": ["critter:cow", "critter:chick", "critter:sheep"],
+  "diff": "The only prose flagship and the only one built on the story scene: a 17-page narrated picture book with page turns, a title page and a moral, which no other flagship contains (the rhyme episode is short verse on single pages; the learn episode is flashcards). It runs at 72 BPM in learn mode under Greensleeves — a melody and tempo used nowhere else — and closes with a single flower-garden loop under Grieg's Morning Mood rather than a dance or sleep loop. Age band (18 months–4 years), narration length (about 2.5 minutes of continuous reading) and the fairy-tale cast (Jack, his mother, the giant, the hen, the harp) are unique to this episode.",
+  "segments": [
+    { "type": "story", "story": "jack-and-the-beanstalk", "bpm": 72, "melody": "greensleeves", "music": "learn", "pause": 1.8, "minPage": 5 },
+    { "type": "loop", "scene": "garden", "label": "Wind-down in the garden — Morning Mood", "minutes": 3, "bpm": 84, "melody": "morning", "music": "learn", "seed": 651 },
+    { "type": "title", "text": "More at baby-loop.netlify.app/shop", "caption": "Made just for your little one", "seconds": 8, "scene": { "background": "meadow", "props": ["🐄", "🐔", "🌱"], "motion": "sway" }, "music": "learn", "melody": "greensleeves", "bpm": 72 }
+  ]
+}

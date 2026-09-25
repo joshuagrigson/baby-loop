@@ -1,0 +1,17 @@
+{
+  "id": "flagship-newborn-contrast-20min",
+  "title": "High Contrast Baby Sensory – Spirals, Rings & Faces – Black, White & Red (0–3 Months)",
+  "thumbnailText": "Black · White · Red | Newborn Sensory",
+  "hook": "20 minutes of slow black, white and red patterns for newborns (0–3 months): spirals, rings, a checkerboard, a bullseye and a big friendly face, each held for 15–30 seconds with soft music-box lullabies. No flashing, no fast cuts. Watch together, 5–10 minutes at a time.",
+  "tags": ["high contrast baby video", "black white red newborn", "newborn sensory", "0-3 months", "baby visual stimulation", "infant sensory video", "calm baby video", "lullaby for babies", "newborn tummy time video", "baby sensory", "babyloop"],
+  "seed": 610,
+  "diff": "The only flagship for the 0–3 month band and the only one built from the high-contrast scene family: black, white and one red, no colour palette, no characters except the newborn face pattern. Its structure is four 5-minute chapters that each show a different subset of the six patterns (spirals+rings, bullseye+face, checkerboard+stripes, then a mixed reprise), each under a different lullaby (Brahms, Twinkle, Gymnopédie, Clair de lune) at 60–66 BPM. Nothing here — scene, palette, tempo, melody set, age band or the pattern-subset chapter idea — appears in the other five flagships.",
+  "segments": [
+    { "type": "title", "text": "High Contrast", "caption": "for newborns · 0–3 months", "seconds": 4, "props": ["⚫", "🔴", "⚪"], "music": "lullaby", "melody": "twinkle", "bpm": 66 },
+    { "type": "loop", "scene": "high-contrast", "label": "Spirals & rings", "minutes": 5, "bpm": 60, "melody": "brahms", "music": "lullaby", "seed": 611, "options": { "patterns": [0, 1] } },
+    { "type": "loop", "scene": "high-contrast", "label": "Bullseye & a friendly face", "minutes": 5, "bpm": 66, "melody": "twinkle", "music": "lullaby", "seed": 612, "options": { "patterns": [3, 5] } },
+    { "type": "loop", "scene": "high-contrast", "label": "Checkerboard & stripes", "minutes": 5, "bpm": 63, "melody": "gymnopedie", "music": "lullaby", "seed": 613, "options": { "patterns": [2, 4] } },
+    { "type": "loop", "scene": "high-contrast", "label": "All six patterns (reprise)", "minutes": 5, "bpm": 60, "melody": "clairdelune", "music": "lullaby", "seed": 614, "options": { "patterns": [5, 1, 3, 0, 4, 2] } },
+    { "type": "title", "text": "More at baby-loop.netlify.app/shop", "caption": "Made just for your little one", "seconds": 8, "props": ["⚫", "🔴", "⚪"], "music": "lullaby", "melody": "twinkle", "bpm": 66 }
+  ]
+}

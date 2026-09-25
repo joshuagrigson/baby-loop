@@ -1,0 +1,21 @@
+{
+  "id": "flagship-fruit-colours-counting-12min",
+  "title": "Fruit Friends – Colours & Counting 1 to 10 – Narrated Learning Video for Babies & Toddlers",
+  "thumbnailText": "Colours & Counting | with the Fruit Friends",
+  "hook": "12 minutes of colours, counting 1 to 10 and shapes for 6–24 months: slow narrated flashcards with a 3-second pause after every card so your little one can answer, and Fruit Friends dance breaks in between (Twinkle, Old MacDonald, London Bridge). Watch together and say the words back.",
+  "tags": ["colours for toddlers", "counting 1 to 10", "learn colors for babies", "shapes for toddlers", "toddler learning video", "fruit friends", "baby learning video", "narrated flashcards", "first words", "nursery rhymes", "baby sensory", "babyloop"],
+  "seed": 620,
+  "voice": "kristin",
+  "speechRate": 1.15,
+  "diff": "The only narrated LEARN flagship: three flashcard lessons (colours, numbers 1–10, shapes) read by the narrator with a deliberate 3-second answer pause after each card, alternating with three Fruit Friends dance loops that grow the cast from 5 to 7 characters. Its concept (call-and-response learning), scene mix (flashcards + dancing-fruits), tempo (94 BPM lessons / 108–112 BPM dance) and melody set (Mary, Row, Frère Jacques under the lessons; Twinkle, Old MacDonald, London Bridge under the dances) are not used by any other flagship; the newborn, bubbles and lullaby episodes have no narration at all, and the rhyme and story episodes narrate verse and prose rather than lesson cards.",
+  "segments": [
+    { "type": "title", "text": "Colours & Counting", "caption": "with the Fruit Friends", "seconds": 4, "props": ["🍓", "🍊", "🍇"], "music": "learn", "melody": "mary", "bpm": 96 },
+    { "type": "lesson", "lesson": "colors", "label": "Colours", "bpm": 94, "music": "learn", "melody": "mary", "perCard": 7.5 },
+    { "type": "loop", "scene": "dancing-fruits", "label": "Fruit Friends dance — Twinkle", "minutes": 3.5, "bpm": 112, "melody": "twinkle", "music": "dance", "seed": 621, "options": { "count": 5 } },
+    { "type": "lesson", "lesson": "numbers", "label": "Counting 1 to 10", "bpm": 94, "music": "learn", "melody": "row", "perCard": 7.5 },
+    { "type": "loop", "scene": "dancing-fruits", "label": "Fruit Friends dance — Old MacDonald", "minutes": 3, "bpm": 108, "melody": "oldmac", "music": "dance", "seed": 622, "options": { "count": 6 } },
+    { "type": "lesson", "lesson": "shapes", "label": "Shapes", "bpm": 94, "music": "learn", "melody": "frere", "perCard": 7.5 },
+    { "type": "loop", "scene": "dancing-fruits", "label": "Fruit Friends dance — London Bridge", "minutes": 2.5, "bpm": 112, "melody": "london", "music": "dance", "seed": 623, "options": { "count": 7 } },
+    { "type": "title", "text": "More at baby-loop.netlify.app/shop", "caption": "Made just for your little one", "seconds": 8, "props": ["🍓", "🍊", "🍇"], "music": "learn", "melody": "mary", "bpm": 96 }
+  ]
+}

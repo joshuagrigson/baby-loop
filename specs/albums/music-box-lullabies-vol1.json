@@ -1,0 +1,26 @@
+{
+  "id": "music-box-lullabies-vol1",
+  "title": "Music Box Lullabies, Vol. 1",
+  "artist": "BabyLoop",
+  "year": 2026,
+  "genre": "Children's Music",
+  "mode": "lullaby",
+  "minutes": 3.5,
+  "description": "Twelve of the gentlest melodies ever written, arranged for music box, soft bells and harp over a warm pad. Each piece is a real song, not a loop: a quiet intro, verses that change colour as they go, a soft bridge and a slowing-down ending with a long, hushed tail. Mastered quietly for bedtime, cots and car seats. No voices, no sudden sounds.",
+  "tags": ["lullaby", "music box", "baby sleep", "bedtime", "nursery rhymes", "brahms lullaby", "twinkle twinkle", "sleep music for babies"],
+  "cover": { "hero": "sheep", "friends": ["bunny", "hedgehog"], "titleLines": ["Music Box", "Lullabies"], "badge": "Vol. 1" },
+  "tracks": [
+    { "melody": "brahms",       "title": "Brahms' Lullaby",                 "bpm": 64, "key": 0,  "seed": 101, "minutes": 3.6 },
+    { "melody": "twinkle",      "title": "Twinkle, Twinkle, Little Star",   "bpm": 66, "key": -2, "seed": 102, "minutes": 3.4 },
+    { "melody": "clairdelune",  "title": "Clair de lune",                   "bpm": 58, "key": 0,  "seed": 103, "minutes": 3.8, "lead": "bells" },
+    { "melody": "mary",         "title": "Mary Had a Little Lamb",          "bpm": 68, "key": 2,  "seed": 104, "minutes": 3.2 },
+    { "melody": "gymnopedie",   "title": "Gymnopédie No. 1",                "bpm": 60, "key": 0,  "seed": 105, "minutes": 3.7 },
+    { "melody": "greensleeves", "title": "Greensleeves",                    "bpm": 62, "key": 0,  "seed": 106, "minutes": 3.9 },
+    { "melody": "largo",        "title": "Largo (Goin' Home)",              "bpm": 56, "key": -1, "seed": 107, "minutes": 3.6 },
+    { "melody": "jesu",         "title": "Jesu, Joy of Man's Desiring",     "bpm": 66, "key": 0,  "seed": 108, "minutes": 3.5 },
+    { "melody": "moonlight",    "title": "Moonlight Sonata",                "bpm": 60, "key": 0,  "seed": 109, "minutes": 3.6 },
+    { "melody": "canon",        "title": "Canon in D",                      "bpm": 60, "key": 2,  "seed": 110, "minutes": 4.0 },
+    { "melody": "frere",        "title": "Frère Jacques",                   "bpm": 64, "key": -3, "seed": 111, "minutes": 3.3 },
+    { "melody": "row",          "title": "Row, Row, Row Your Boat",         "bpm": 60, "key": 0,  "seed": 112, "minutes": 3.3, "lead": "bells" }
+  ]
+}

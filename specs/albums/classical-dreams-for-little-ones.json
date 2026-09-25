@@ -1,0 +1,26 @@
+{
+  "id": "classical-dreams-for-little-ones",
+  "title": "Classical Dreams for Little Ones",
+  "artist": "BabyLoop",
+  "year": 2026,
+  "genre": "Children's Music",
+  "mode": "lullaby",
+  "minutes": 3.6,
+  "description": "Twelve famous classical themes — Beethoven, Mozart, Bach, Vivaldi, Tchaikovsky, Grieg, Strauss — slowed right down and re-imagined as music-box lullabies. Each one is a full 3–4 minute arrangement with an intro, verses that pass between music box, bells and marimba, a soft harp bridge and a gentle ritardando ending. Quiet, even-tempered and free of surprises, for naps and long nights.",
+  "tags": ["classical for babies", "lullaby", "music box", "baby sleep", "mozart for babies", "beethoven for babies", "bedtime classical", "sleep music"],
+  "cover": { "hero": "owl", "friends": ["bear", "mouse"], "titleLines": ["Classical", "Dreams"], "badge": "for Little Ones", "top": "#140f33", "bottom": "#3a2f6e", "moon": "#ffe3b0" },
+  "tracks": [
+    { "melody": "ode",        "title": "Ode to Joy",                     "bpm": 60, "key": 0,  "seed": 201, "minutes": 3.5 },
+    { "melody": "minuet",     "title": "Minuet in G",                    "bpm": 66, "key": 0,  "seed": 202, "minutes": 3.6 },
+    { "melody": "furelise",   "title": "Für Elise",                      "bpm": 62, "key": 0,  "seed": 203, "minutes": 3.7, "lead": "bells" },
+    { "melody": "nachtmusik", "title": "Eine kleine Nachtmusik",         "bpm": 64, "key": 0,  "seed": 204, "minutes": 3.5 },
+    { "melody": "prelude",    "title": "Prelude in C",                   "bpm": 56, "key": 0,  "seed": 205, "minutes": 3.8 },
+    { "melody": "spring",     "title": "Spring (The Four Seasons)",      "bpm": 62, "key": -2, "seed": 206, "minutes": 3.4 },
+    { "melody": "swanlake",   "title": "Swan Lake",                      "bpm": 58, "key": 0,  "seed": 207, "minutes": 3.9, "lead": "bells" },
+    { "melody": "danube",     "title": "The Blue Danube",                "bpm": 66, "key": 0,  "seed": 208, "minutes": 3.6 },
+    { "melody": "morning",    "title": "Morning Mood",                   "bpm": 64, "key": 0,  "seed": 209, "minutes": 3.5 },
+    { "melody": "k545",       "title": "Sonata facile (K. 545)",         "bpm": 60, "key": 0,  "seed": 210, "minutes": 3.4 },
+    { "melody": "bridal",     "title": "Bridal Chorus",                  "bpm": 58, "key": 0,  "seed": 211, "minutes": 3.6 },
+    { "melody": "surprise",   "title": "Surprise Symphony (Andante)",    "bpm": 64, "key": -1, "seed": 212, "minutes": 3.3 }
+  ]
+}

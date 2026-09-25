@@ -1,0 +1,20 @@
+{
+  "id": "flagship-sleepy-lullaby-60min",
+  "title": "Sleepy Stars – 1 Hour Lullaby – Brahms, Clair de lune, Gymnopédie – Bedtime Video for Babies",
+  "thumbnailText": "Sleepy Stars | 1 Hour Lullaby",
+  "hook": "One hour of dim, slow, drifting animation and soft music-box lullabies for winding down (0–36 months): a dozing moon and sleepy sheep, balloons floating up into the evening and a gentle night-time rain, under Brahms' Lullaby, Clair de lune, Gymnopédie No. 1, Dvořák's Largo, the Moonlight Sonata and Jesu, Joy of Man's Desiring at 58–66 BPM. Turn the brightness down; the picture gets calmer as the hour goes on.",
+  "tags": ["lullaby for babies", "baby sleep music", "bedtime video for babies", "1 hour lullaby", "brahms lullaby", "clair de lune baby", "gymnopedie", "calm baby video", "sleepy stars", "baby sleep video", "music box lullaby", "babyloop"],
+  "seed": 660,
+  "thumbnailHeroes": ["critter:sheep", "critter:owl", "critter:bunny"],
+  "diff": "The only sleep flagship and the only one an hour long: six classical lullabies in music-box arrangements at 58–66 BPM (Brahms, Clair de lune, Gymnopédie, Largo, Moonlight Sonata, Jesu) over a night-time scene set — sleepy-stars for four chapters plus balloons and rainbow-rain rendered in lullaby mode, which appear at that tempo nowhere else. It has no narration, no dance loops, no lesson or story pages, and it is built to be left running with the screen dimmed, unlike the five daytime episodes.",
+  "segments": [
+    { "type": "title", "text": "Sleepy Stars", "caption": "one hour of lullabies", "seconds": 5, "props": ["🐑", "🌙", "🦉"], "scene": { "background": "night", "props": ["🐑", "🌙", "🦉"], "motion": "float" }, "music": "lullaby", "melody": "brahms", "bpm": 66 },
+    { "type": "loop", "scene": "sleepy-stars", "label": "Brahms' Lullaby", "minutes": 12, "bpm": 66, "melody": "brahms", "music": "lullaby", "seed": 661 },
+    { "type": "loop", "scene": "balloons", "label": "Balloons at dusk — Clair de lune", "minutes": 8, "bpm": 58, "melody": "clairdelune", "music": "lullaby", "seed": 662, "palette": "pastel" },
+    { "type": "loop", "scene": "sleepy-stars", "label": "Gymnopédie No. 1", "minutes": 12, "bpm": 63, "melody": "gymnopedie", "music": "lullaby", "seed": 663 },
+    { "type": "loop", "scene": "rainbow-rain", "label": "Night rain — Largo", "minutes": 8, "bpm": 60, "melody": "largo", "music": "lullaby", "seed": 664, "palette": "pastel" },
+    { "type": "loop", "scene": "sleepy-stars", "label": "Moonlight Sonata", "minutes": 10, "bpm": 60, "melody": "moonlight", "music": "lullaby", "seed": 665 },
+    { "type": "loop", "scene": "sleepy-stars", "label": "Jesu, Joy of Man's Desiring", "minutes": 10, "bpm": 63, "melody": "jesu", "music": "lullaby", "seed": 666 },
+    { "type": "title", "text": "More at baby-loop.netlify.app/shop", "caption": "Made just for your little one", "seconds": 8, "scene": { "background": "night", "props": ["🐑", "🌙", "🦉"], "motion": "float" }, "music": "lullaby", "melody": "brahms", "bpm": 66 }
+  ]
+}

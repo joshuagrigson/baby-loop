@@ -1,0 +1,26 @@
+{
+  "id": "holiday-lullabies",
+  "title": "Holiday Lullabies",
+  "artist": "BabyLoop",
+  "year": 2026,
+  "genre": "Children's Music",
+  "mode": "lullaby",
+  "minutes": 3.5,
+  "description": "Carols and winter favourites arranged slow and soft for a baby's first Christmas: music box, bells and harp over a warm pad, with the tempo turned right down. Every track is a full arrangement with a quiet intro, changing verses and a gentle slowing-down ending — calm enough for the crib, still recognisable enough for grandparents to hum along.",
+  "tags": ["christmas lullaby", "holiday lullabies", "baby's first christmas", "silent night music box", "jingle bells lullaby", "christmas sleep music", "music box", "baby sleep"],
+  "cover": { "hero": "bunny", "friends": ["sheep", "bear"], "hat": "santa", "snow": true, "titleLines": ["Holiday", "Lullabies"], "badge": "music box carols", "top": "#0b1a3a", "bottom": "#1f4a6e", "moon": "#fff1c4" },
+  "tracks": [
+    { "melody": "silentnight",  "title": "Silent Night",                          "bpm": 56, "key": 0,  "seed": 301, "minutes": 3.8 },
+    { "melody": "jingle",       "title": "Jingle Bells (Lullaby)",                "bpm": 66, "key": -2, "seed": 302, "minutes": 3.4, "lead": "bells" },
+    { "melody": "deckhalls",    "title": "Deck the Halls (Lullaby)",              "bpm": 64, "key": 0,  "seed": 303, "minutes": 3.6 },
+    { "melody": "wewish",       "title": "We Wish You a Merry Christmas (Lullaby)","bpm": 66, "key": 0,  "seed": 304, "minutes": 3.4 },
+    { "melody": "greensleeves", "title": "What Child Is This (Greensleeves)",     "bpm": 60, "key": -2, "seed": 305, "minutes": 3.9, "lead": "bells" },
+    { "melody": "jesu",         "title": "Jesu, Joy of Man's Desiring (Christmas)","bpm": 62, "key": 2,  "seed": 306, "minutes": 3.5, "lead": "bells" },
+    { "melody": "canon",        "title": "Canon in D (Christmas Eve)",            "bpm": 58, "key": 0,  "seed": 307, "minutes": 4.0 },
+    { "melody": "ode",          "title": "Joyful, Joyful (Ode to Joy)",           "bpm": 58, "key": -2, "seed": 308, "minutes": 3.5, "lead": "bells" },
+    { "melody": "danube",       "title": "New Year's Waltz (The Blue Danube)",    "bpm": 62, "key": 2,  "seed": 309, "minutes": 3.6 },
+    { "melody": "largo",        "title": "Goin' Home (Largo)",                    "bpm": 56, "key": 2,  "seed": 310, "minutes": 3.6, "lead": "bells" },
+    { "melody": "minuet",       "title": "Minuet in G (By the Fire)",             "bpm": 62, "key": -2, "seed": 311, "minutes": 3.5 },
+    { "melody": "swanlake",     "title": "Winter Lake (Swan Lake)",               "bpm": 60, "key": -2, "seed": 312, "minutes": 3.7 }
+  ]
+}
